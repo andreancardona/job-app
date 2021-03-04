@@ -1,4 +1,5 @@
-import Navigation from './Navigation'
+import Navigation from './Navigation';
+import JobTile from './JobTile';
 import '../styles/App.css';
 
 function App() {
@@ -6,6 +7,8 @@ function App() {
     <div className="App">
       <div className="banner" role="banner">
         <Navigation />
+        {/* Jobs title and add jobs functionality */}
+        <JobTile />
       </div>
     </div>
   );
