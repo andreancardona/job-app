@@ -1,0 +1,56 @@
+/* jobs list container */
+
+.jobs-list-container {
+  width: 68%;
+  background:  #E5E5E5;
+  border-radius: 4px;
+  margin: 10% 10% 10% 10%;
+}
+
+.jobs-list-headers {
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color:  #949494;
+  padding: 10px 0 10px 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-title {
+  padding: 0 100px 0 10px;
+}
+
+.header-status {
+  padding-right: 150px;
+}
+
+
+.job-tile {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  margin-bottom: 6px;
+
+  width: 100%;
+  height: 80px;
+  border: 1px solid #D4D2D0;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.job-title-location {
+  width: 200px;
+  padding: 18px 0px 18px 18px;
+}
+.edit-button {
+  margin: 0 20px 0 0;
+}

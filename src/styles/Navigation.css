@@ -1,3 +1,14 @@
+/* banner */
+
+.banner {
+  position: absolute;
+  height: 64px;
+  left: 0px;
+  top: 0px;
+  background: #2D2D2D;
+  width: 100%;
+}
+ 
  /* navigation */
 
  .nav-container {
@@ -5,7 +16,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
-  /* justify-content: space-between; */
  }
 
 .header {
@@ -22,7 +32,6 @@
 /* user profile */
 
 .user-profile--image {
-  /* position: absolute; */
   width: 36px;
   height: 36px;
   left: 822px;
@@ -36,7 +45,6 @@
 }
 
 .user-profile--name {
-  /* position: absolute; */
   left: 866px;
   font-family: Helvetica Neue;
   font-style: normal;

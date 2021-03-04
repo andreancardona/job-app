@@ -3,6 +3,7 @@ import '../styles/Navigation.css';
 
 function Navigation() {
   return (
+  <div className="banner" role="banner">
     <div className="nav-container">
       <div className="header" tabIndex="0" >Welcome to JobHob</div>
         <img className="user-profile--image" alt="profile placeholder" tabIndex="0"  src={profilePlaceholder} />
@@ -11,6 +12,7 @@ function Navigation() {
         <div className="user-profile--role" tabIndex="0">Admin</div>
       </div>
     </div>
+  </div>
 );
 }
 
