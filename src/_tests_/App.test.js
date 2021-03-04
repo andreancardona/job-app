@@ -1,8 +1,23 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import App from '../components/App';
+import Link from '../components/Link.react';
 
-test('renders learn react link', () => {
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<App />, div);
+});
+
+it('renders welcome message', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText('Learn React')).toBeInTheDocument();
+});
+
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<Link page="http://www.facebook.com">Facebook</Link>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
 });
