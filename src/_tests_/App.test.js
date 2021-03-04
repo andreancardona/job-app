@@ -1,23 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render, screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import App from '../components/App';
-import Link from '../components/Link.react';
+import { render } from '@testing-library/react';
+import { axe } from 'jest-axe';
 
-it('renders without crashing', () => {
+import App from '../components/App';
+
+it('renders without crashing - hopefully', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
 });
 
-it('renders welcome message', () => {
-  render(<App />);
-  expect(screen.getByText('Learn React')).toBeInTheDocument();
-});
-
-it('renders correctly', () => {
-  const tree = renderer
-    .create(<Link page="http://www.facebook.com">Facebook</Link>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+describe('The <App /> component', () => {
+  
+  it('should not fail any accessibility tests', async () => {
+    const { container } = render(<App />);
+    expect(await axe(container)).toHaveNoViolations();
+  });
+  
 });

@@ -38,6 +38,7 @@
     "@testing-library/dom": "^7.29.6",
     "@testing-library/jest-dom": "^5.11.9",
     "enzyme-adapter-react-16": "^1.15.6",
+    "jest-axe": "^4.1.0",
     "jest-environment-enzyme": "^7.1.2",
     "jest-enzyme": "^7.1.2",
     "react-test-renderer": "^17.0.1"
