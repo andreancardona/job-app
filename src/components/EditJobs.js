@@ -36,7 +36,9 @@ const EditJob = props => {
       <label>Status</label>
 			  <input type="text" name="status" value={job.status} onChange={handleInputChange} />
       <button>Update Job</button>
-      <button onClick={() => props.setEditing(false)} className="edit-button">
+
+      {/* Add Clear / Cancel button functionality */}
+      <button className="edit-button">
         Cancel
       </button>
     </form>

@@ -36,6 +36,9 @@ const AddJob = props => {
       <label>status</label>
         <input type="text" name="status" value={job.status} onChange={handleInputChange}/>
       <button>Add a new Job</button>
+      <button onClick={() => props.setEditing(false)} className="edit-button">
+        Cancel
+      </button>
     </form>
 	)
 }
