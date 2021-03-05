@@ -3,13 +3,7 @@ import React, { useState, useEffect } from 'react'
 const EditJob = props => {
   const [ job, setJob ] = useState(props.currentJob)
 
-  useEffect(
-    () => {
-      setJob(props.currentJob)
-    },
-    [ props ]
-  )
-  // You can tell React to skip applying an effect if certain values haven’t changed between re-renders. [ props ]
+  useEffect(() => {setJob(props.currentJob)},[ props ])
 
   const handleInputChange = event => {
     const { name, value } = event.target
@@ -17,14 +11,14 @@ const EditJob = props => {
     setJob({ ...job, [name]: value })
   }
 
-  return (
-    <form
-      onSubmit={event => {
-        event.preventDefault()
+  const handleSubmit = event => {
+    event.preventDefault()
 
-        props.updateJob(job.id, job)
-      }}
-    >
+    props.updateJob(job.id, job)
+  }
+
+  return (
+    <form>
 			<label>Title</label>
 			  <input type="text" name="title" value={job.title} onChange={handleInputChange} />
 			<label>Location</label>
@@ -35,10 +29,8 @@ const EditJob = props => {
 			  <input type="text" name="sponsorship" value={job.sponsorship} onChange={handleInputChange} />
       <label>Status</label>
 			  <input type="text" name="status" value={job.status} onChange={handleInputChange} />
-      <button>Update Job</button>
-
-      {/* Add Clear / Cancel button functionality */}
-      <button className="edit-button">
+      <button onClick={handleSubmit}>Update Job</button>
+      <button onClick={() => props.setEditing(false)} className="edit-button">
         Cancel
       </button>
     </form>

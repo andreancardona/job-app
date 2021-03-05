@@ -1,5 +1,8 @@
+import React from 'react';
 import '../styles/JobsList.css';
 
+// JobList component where pass down props: jobs & editJob
+// Here we will handle the list view for all the jobs
 const JobsList = props => {
   return (
     <div className="jobs-list-container">
@@ -9,8 +12,9 @@ const JobsList = props => {
         <div className="header-sponsorship">Sponsorship</div>
         <div className="header-status">Status</div>
       </div>
-      {props.jobs.length > 0 ? (
-        props.jobs.map(job => (
+      {/* We are mapping over our list of jobs to be rendered and viewed. 
+      If data was not already provided check for items in list  */}
+      {props.jobs.map(job => (
           <div className="job-tile" key={job.id}>
             <div className="job-title-location">
               <div clasName="title">{job.title}</div>
@@ -20,22 +24,12 @@ const JobsList = props => {
             <div className="sponsorhip">{job.sponsorship}</div>
             <div className="status">{job.status}</div>
             <div>
-            <button
-                onClick={() => {
-                  props.editJobRow(job)
-                }}
-                className="edit-button"
-              >
+              <button onClick={() => {props.editJob(job)}}className="edit-button">
                 Edit
               </button>
             </div>
           </div>
-        ))
-      ) : (
-        <div className="job-tile">
-          <div>No Jobs</div>
-        </div>
-      )}
+        ))}
       </div>
   )
 }

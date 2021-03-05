@@ -6,7 +6,7 @@ import AddJob from '../components/AddJob.js';
 import '../styles/App.css';
 
 const App = () => {
-  const jobsData = [
+  const jobsList = [
     { id: 1, title: 'Astronaut', location: 'Austin, TX', posted: 'today', sponsorship: 'yes', status: 'none' },
     { id: 2, title: 'Barista', location: 'Austin, TX', posted: 'yesterday', sponsorship: 'yes', status: 'none'},
     { id: 3, title: 'Dancer', location: 'Austin, TX',posted: 'tomorrow', sponsorship: 'yes', status: 'none' },
@@ -14,8 +14,8 @@ const App = () => {
 
   const initialFormState = { id: null, title: '', location: '', posted: '', sponsorship: '', status: '' };
 
-  // Set our state 
-  const [ jobs, setJobs ] = useState(jobsData)
+  // Set our state / Read our list of jobs
+  const [ jobs, setJobs ] = useState(jobsList)
 	const [ currentJob, setCurrentJob ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
 
@@ -25,21 +25,22 @@ const App = () => {
 		job.id = job.length + 1
 		setJobs([ ...jobs, job ])
 	}
-  (console.log(...jobs))
-  // Update a Job
+
+  // Update a job
   const updateJob = (id, updatedJob) => {
 		setEditing(false)
 
 		setJobs(jobs.map(job => (job.id === id ? updatedJob : job)))
 	}
 
-  const editJobRow = job => {
+  // Allow user to edit job
+  const editJob = job => {
 		setEditing(true)
   
     setCurrentJob({ 
       id: job.id, 
-      jobTitle: job.title, 
-      jobLocation: job.location, 
+      title: job.title, 
+      location: job.location, 
       posted: job.posted, 
       sponsorship: job.sponsorship, 
       status: job.status 
@@ -49,7 +50,7 @@ const App = () => {
   return (
   <div className="app-container">
       <Navigation />
-      <JobsList jobs={jobs} editJobRow={editJobRow}/>
+      <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>
       {editing ? (
       <div>
           <h2>Edit Job</h2>
@@ -63,7 +64,7 @@ const App = () => {
       ) : (
         <Fragment>
         <h2>Add Job</h2>
-						<AddJob addJob={addJob} />
+						<AddJob addJob={addJob} setEditing={setEditing}/>
         </Fragment>
       )}
     </div>
