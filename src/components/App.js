@@ -6,6 +6,7 @@ import EditJob from './EditJob';
 import AddJob from '../components/AddJob.js';
 import AddJobButton from '../components/AddJobButton';
 import '../styles/App.css';
+import history from './history';
 
 const App = () => {
   const jobsList = [
@@ -53,21 +54,19 @@ const App = () => {
 
   return (
   <div className="app-container">
-    <Router>
+    <Router history={history}>
       <Navigation />
       <AddJobButton />
         <Switch>
           <Route path="/home" component={() => <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>} />
-          <Route path="/form" component={() => 
-          editing ?
+          <Route path="/edit-job" component={() => 
             <EditJob
+              jobs={jobs}
               editing={editing}
               setEditing={setEditing}
               currentJob={currentJob}
               updateJob={updateJob}
-            /> 
-            : null
-            } />
+            /> } />
           <Route path="/add-job" component={() => 
             <AddJob jobs={jobs} addJob={addJob} setEditing={setEditing}/> 
           }/> 

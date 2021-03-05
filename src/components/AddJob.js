@@ -41,7 +41,6 @@ const AddJob = (props) => {
       <button onClick={() => props.setEditing(false)} className="edit-button">
         Cancel
       </button>
-      {console.log('AddJob', props)}
       <Link to="/home">home</Link>
     </form>
 	)

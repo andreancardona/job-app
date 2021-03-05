@@ -1,10 +1,10 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import '../styles/JobsList.css';
 
 // JobList component where pass down props: jobs & editJob
 // Here we will handle the list view for all the jobs
 const JobsList = (props) => {
-  (console.log('JobsList', props.jobs))
   return (
     <div className="jobs-list-container">
       <div className="jobs-list-headers" tabIndex="0">
@@ -25,7 +25,7 @@ const JobsList = (props) => {
             <div className="sponsorhip">{job.sponsorship}</div>
             <div className="status">{job.status}</div>
             <div>
-              <button onClick={() => {props.editJob(job)}}className="edit-button">
+              <button to="/edit-job" onClick={() => {props.editJob(job)}} className="edit-button">
                 Edit
               </button>
             </div>
