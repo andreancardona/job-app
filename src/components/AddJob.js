@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const AddJob = props => {
-  const initialFormState = { id: null, title: '', location: '', posted: '', sponsorship: '', status: '' };
+  const initialFormState = { id: '', title: '', location: '', posted: '', sponsorship: '', status: '' };
 	const [ job, setJob ] = useState(initialFormState)
 
 	const handleInputChange = event => {
@@ -35,7 +35,6 @@ const AddJob = props => {
       <label>status</label>
         <input type="text" name="status" value={job.status} onChange={handleInputChange}/>
       <button onClick={handleSubmit}>Add a new Job</button>
-      {console.log(props)}
       <button onClick={() => props.setEditing(false)} className="edit-button">
         Cancel
       </button>

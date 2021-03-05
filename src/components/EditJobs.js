@@ -16,7 +16,7 @@ const EditJob = props => {
 
     props.updateJob(job.id, job)
   }
-
+  
   return (
     <form>
 			<label>Title</label>

@@ -12,7 +12,7 @@ const App = () => {
     { id: 3, title: 'Dancer', location: 'Austin, TX',posted: 'tomorrow', sponsorship: 'yes', status: 'none' },
   ]
 
-  const initialFormState = { id: null, title: '', location: '', posted: '', sponsorship: '', status: '' };
+  const initialFormState = { id: '', title: '', location: '', posted: '', sponsorship: '', status: '' };
 
   // Set our state / Read our list of jobs
   const [ jobs, setJobs ] = useState(jobsList)
@@ -21,16 +21,19 @@ const App = () => {
 
 
   // Add a Job
-  const addJob = job => {
-		job.id = job.length + 1
-		setJobs([ ...jobs, job ])
+  const addJob = (job) => {
+		job.id = jobs.length + 1
+    const newJobs = [...jobs, job]
+    
+		setJobs(newJobs);
 	}
 
   // Update a job
-  const updateJob = (id, updatedJob) => {
+  const updateJob = (id, jobBeingUpdated) => {
 		setEditing(false)
+    const updatedJob = jobs.map(job => (job.id === id ? jobBeingUpdated : job))
 
-		setJobs(jobs.map(job => (job.id === id ? updatedJob : job)))
+		setJobs(updatedJob);
 	}
 
   // Allow user to edit job
