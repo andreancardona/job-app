@@ -1,8 +1,10 @@
-import React, {useState, Fragment} from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from '../components/Navigation';
 import JobsList from '../components/JobsList';
-import EditJobs from '../components/EditJobs';
+import EditJob from './EditJob';
 import AddJob from '../components/AddJob.js';
+import AddJobButton from '../components/AddJobButton';
 import '../styles/App.css';
 
 const App = () => {
@@ -19,12 +21,25 @@ const App = () => {
 	const [ currentJob, setCurrentJob ] = useState(initialFormState)
 	const [ editing, setEditing ] = useState(false)
 
+ // Allow user to edit job
+ const editJob = (job) => {
+  setEditing(true)
+
+  setCurrentJob({ 
+    id: job.id, 
+    title: job.title, 
+    location: job.location, 
+    posted: job.posted, 
+    sponsorship: job.sponsorship, 
+    status: job.status 
+  })
+}
 
   // Add a Job
   const addJob = (job) => {
 		job.id = jobs.length + 1
     const newJobs = [...jobs, job]
-    
+
 		setJobs(newJobs);
 	}
 
@@ -36,40 +51,28 @@ const App = () => {
 		setJobs(updatedJob);
 	}
 
-  // Allow user to edit job
-  const editJob = job => {
-		setEditing(true)
-  
-    setCurrentJob({ 
-      id: job.id, 
-      title: job.title, 
-      location: job.location, 
-      posted: job.posted, 
-      sponsorship: job.sponsorship, 
-      status: job.status 
-    })
-  }
-
   return (
   <div className="app-container">
+    <Router>
       <Navigation />
-      <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>
-      {editing ? (
-      <div>
-          <h2>Edit Job</h2>
-          <EditJobs
-            editing={editing}
-            setEditing={setEditing}
-            currentJob={currentJob}
-            updateJob={updateJob}
-          />
-        </div>
-      ) : (
-        <Fragment>
-        <h2>Add Job</h2>
-						<AddJob addJob={addJob} setEditing={setEditing}/>
-        </Fragment>
-      )}
+      <AddJobButton />
+        <Switch>
+          <Route path="/home" component={() => <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>} />
+          <Route path="/form" component={() => 
+          editing ?
+            <EditJob
+              editing={editing}
+              setEditing={setEditing}
+              currentJob={currentJob}
+              updateJob={updateJob}
+            /> 
+            : null
+            } />
+          <Route path="/add-job" component={() => 
+            <AddJob jobs={jobs} addJob={addJob} setEditing={setEditing}/> 
+          }/> 
+        </Switch>
+      </Router>
     </div>
   )
 };

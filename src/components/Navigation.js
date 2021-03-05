@@ -1,7 +1,7 @@
 import profilePlaceholder from '../images/profilePlaceholder.svg';
 import '../styles/Navigation.css';
 
-function Navigation() {
+const Navigation = () => {
   return (
   <div className="banner" role="banner">
     <div className="nav-container">

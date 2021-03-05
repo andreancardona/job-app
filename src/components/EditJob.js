@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import '../styles/EditJob.css';
 
 const EditJob = props => {
   const [ job, setJob ] = useState(props.currentJob)
 
   useEffect(() => {setJob(props.currentJob)},[ props ])
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     const { name, value } = event.target
 
     setJob({ ...job, [name]: value })
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault()
 
     props.updateJob(job.id, job)
   }
   
   return (
-    <form>
+    <form className="edit-job-form">
 			<label>Title</label>
 			  <input type="text" name="title" value={job.title} onChange={handleInputChange} />
 			<label>Location</label>

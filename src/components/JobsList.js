@@ -3,7 +3,8 @@ import '../styles/JobsList.css';
 
 // JobList component where pass down props: jobs & editJob
 // Here we will handle the list view for all the jobs
-const JobsList = props => {
+const JobsList = (props) => {
+  (console.log('JobsList', props.jobs))
   return (
     <div className="jobs-list-container">
       <div className="jobs-list-headers" tabIndex="0">
@@ -14,7 +15,7 @@ const JobsList = props => {
       </div>
       {/* We are mapping over our list of jobs to be rendered and viewed. 
       If data was not already provided check for items in list  */}
-      {props.jobs.map(job => (
+      {props.jobs.map((job) => (
           <div className="job-tile" key={job.id}>
             <div className="job-title-location">
               <div clasName="title">{job.title}</div>
