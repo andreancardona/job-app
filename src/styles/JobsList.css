@@ -1,7 +1,13 @@
 /* jobs list container */
-
 .jobs-list-container {
   width: 68%;
+  background:  #E5E5E5;
+  border-radius: 4px;
+  margin: 10% 10% 10% 10%;
+}
+
+
+.jobs-list {
   background:  #E5E5E5;
   border-radius: 4px;
   margin: 10% 10% 10% 10%;

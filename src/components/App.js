@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navigation from '../components/Navigation';
 import JobsList from '../components/JobsList';
 import EditJob from './EditJob';
 import AddJob from '../components/AddJob.js';
-import AddJobButton from '../components/AddJobButton';
 import '../styles/App.css';
-import history from './history';
 
 const App = () => {
+  // Our list of jobs
   const jobsList = [
     { id: 1, title: 'Astronaut', location: 'Austin, TX', posted: 'today', sponsorship: 'yes', status: 'none' },
     { id: 2, title: 'Barista', location: 'Austin, TX', posted: 'yesterday', sponsorship: 'yes', status: 'none'},
@@ -36,7 +34,7 @@ const App = () => {
   })
 }
 
-  // Add a Job
+  // Add a job
   const addJob = (job) => {
 		job.id = jobs.length + 1
     const newJobs = [...jobs, job]
@@ -53,24 +51,24 @@ const App = () => {
 	}
 
   return (
-  <div className="app-container">
-    <Router history={history}>
-      <Navigation />
-      <AddJobButton />
-        <Switch>
-          <Route path="/home" component={() => <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>} />
-          <Route path="/edit-job" component={() => 
+    <div className="app-container">
+      <Router>
+          <Switch>
+            <Route path="/home" component={() => <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>} />
+            <Route path="/edit-job" component={() => 
+            editing ?
             <EditJob
               jobs={jobs}
               editing={editing}
               setEditing={setEditing}
               currentJob={currentJob}
               updateJob={updateJob}
-            /> } />
-          <Route path="/add-job" component={() => 
+            /> : null 
+            } />
+            <Route path="/add-job" component={() => 
             <AddJob jobs={jobs} addJob={addJob} setEditing={setEditing}/> 
           }/> 
-        </Switch>
+          </Switch>
       </Router>
     </div>
   )

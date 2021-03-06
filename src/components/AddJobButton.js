@@ -1,10 +1,18 @@
 import React from 'react';
-import '../styles/AddJobButton.css'
-import { Link } from "react-router-dom";
+import '../styles/AddJobButton.css';
+import { useHistory } from 'react-router-dom';
 
 const AddJobButton = () => {
+  let history = useHistory();
+
+  const handleClick = (event) => {
+    event.preventDefault()
+
+    history.push("/add-job")
+  }
+
   return (
-    <Link to="/add-job" className="add-job-button">ADD JOB</Link>
+    <button onClick={handleClick}>ADD JOB</button>
   )
 }
 

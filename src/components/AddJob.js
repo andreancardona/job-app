@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 import '../styles/AddJob.css';
 
 const AddJob = (props) => {
@@ -12,13 +12,25 @@ const AddJob = (props) => {
 		setJob({ ...job, [name]: value })
 	}
 
+  let history = useHistory();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if(!job.title || !job.location || !job.posted || !job.sponsorship || !job.status) return
   
     props.addJob(job);
       setJob(initialFormState);
+    
+    history.push("/home")
   };
+
+  const handleCancel = (event) => {
+    event.preventDefault();
+
+    props.setEditing(false)
+
+    history.push("/home")
+  }
 
 	return (
 		<form className="add-job-form">
@@ -38,10 +50,9 @@ const AddJob = (props) => {
       <label>status</label>
         <input type="text" name="status" value={job.status} onChange={handleInputChange}/>
       <button onClick={handleSubmit}>submit</button>
-      <button onClick={() => props.setEditing(false)} className="edit-button">
+      <button onClick={handleCancel} className="edit-button">
         Cancel
       </button>
-      <Link to="/home">home</Link>
     </form>
 	)
 }

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 import '../styles/EditJob.css';
-import  history from './history';
 
-const EditJob = props => {
+const EditJob = (props) => {
   const [ job, setJob ] = useState(props.currentJob)
 
   useEffect(() => {setJob(props.currentJob)},[ props ])
@@ -13,11 +12,23 @@ const EditJob = props => {
 
     setJob({ ...job, [name]: value })
   }
+  
+  let history = useHistory();
 
-  const handleUpdate = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
 
     props.updateJob(job.id, job)
+
+    history.push("/home")
+  }
+
+  const handleCancel = (event) => {
+    event.preventDefault();
+
+    props.setEditing(false)
+
+    history.push("/home")
   }
 
   return (
@@ -32,9 +43,8 @@ const EditJob = props => {
 			  <input type="text" name="sponsorship" value={job.sponsorship} onChange={handleInputChange} />
       <label>Status</label>
 			  <input type="text" name="status" value={job.status} onChange={handleInputChange} />
-      <button onClick={handleUpdate}>Update Job</button>
-      {console.log(props.jobs)}
-      <button onClick={() => props.setEditing(false) || history.push('/Products')} className="edit-button">
+      <button onClick={handleSubmit}>Update Job</button>
+      <button onClick={handleCancel} className="edit-button">
         Cancel
       </button>
     </form>
