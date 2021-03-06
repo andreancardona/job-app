@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Header from './Header';
 import JobsList from '../components/JobsList';
 import EditJob from './EditJob';
 import AddJob from '../components/AddJob.js';
@@ -54,7 +55,12 @@ const App = () => {
     <div className="app-container">
       <Router>
           <Switch>
-            <Route path="/home" component={() => <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>} />
+            <Route path="/home" component={() => 
+            <Fragment>
+              <Header jobs={jobs}/>
+              <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>
+            </Fragment>
+            } />
             <Route path="/edit-job" component={() => 
             editing ?
             <EditJob

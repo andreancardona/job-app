@@ -1,16 +1,16 @@
 /* jobs list container */
 .jobs-list-container {
-  width: 68%;
-  background:  #E5E5E5;
+  width: 70%;
   border-radius: 4px;
-  margin: 10% 10% 10% 10%;
+  margin: 10% 0 10% 0;
 }
 
 
-.jobs-list {
-  background:  #E5E5E5;
-  border-radius: 4px;
-  margin: 10% 10% 10% 10%;
+@media screen and (max-width: 700px) {
+  .jobs-list-container {
+    width: 95%;
+    margin: 30% 0 10% 0;
+  };
 }
 
 .jobs-list-headers {
@@ -29,6 +29,17 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 600px) {
+  .jobs-list-headers {
+    font-family: Noto Sans;
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
 .header-title {
   padding: 0 100px 0 10px;
 }
@@ -37,6 +48,23 @@
   padding-right: 150px;
 }
 
+@media screen and (max-width: 600px) {
+  .header-title {
+    padding: 0 8% 0 3%;
+  }
+
+  .header-posted {
+    padding-right: 10px;
+  }
+
+  .header-sponsorship {
+    padding-right: 10px;
+  }
+
+  .header-status {
+    padding-right: 10px;
+  }
+}
 
 .job-tile {
   align-items: center;
@@ -57,6 +85,24 @@
   width: 200px;
   padding: 18px 0px 18px 18px;
 }
+
+@media screen and (max-width: 600px) {
+  .job-tile {
+    font-size: 16px;
+  }
+
+  .job-title-location {
+    width: 23%;
+    padding: 5% 0px 5% 5%;
+  }
+}
+
 .edit-button {
   margin: 0 20px 0 0;
+}
+
+@media screen and (max-width: 600px) {
+  .edit-button {
+    margin: 0px;
+  }
 }

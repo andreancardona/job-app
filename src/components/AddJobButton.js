@@ -12,7 +12,7 @@ const AddJobButton = () => {
   }
 
   return (
-    <button onClick={handleClick}>ADD JOB</button>
+    <button className="add-job-button" onClick={handleClick}>ADD JOB</button>
   )
 }
 
