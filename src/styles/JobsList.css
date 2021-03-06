@@ -6,7 +6,7 @@
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .jobs-list-container {
     width: 95%;
     margin: 30% 0 10% 0;
@@ -29,7 +29,7 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .jobs-list-headers {
     font-family: Noto Sans;
     font-size: 16px;
@@ -48,7 +48,7 @@
   padding-right: 150px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .header-title {
     padding: 0 8% 0 3%;
   }
