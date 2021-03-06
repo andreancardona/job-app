@@ -6,10 +6,10 @@ import Navigation from './components/Navigation';
 import App from './components/App';
 
 ReactDOM.render(
-    <React.StrictMode>
-      <Navigation />
-      <App />
-    </React.StrictMode>,
+  <React.StrictMode>
+    <Navigation />
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
