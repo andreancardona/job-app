@@ -16,13 +16,31 @@
   font-size: 28px;
   line-height: 35px;
   color: #2d2d2d;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.listings-count {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #949494;
+  margin: 11px 0 0 10px;
 }
 
 @media screen and (max-width: 768px) {
   .header-container {
     margin-top: 30%;
+    width: 80%;
   }
   .header-jobs {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  .listings-count {
+    margin-top: 8px;
   }
 }

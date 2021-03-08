@@ -21,10 +21,10 @@ const JobsList = (props) => {
       {props.jobs.map((job) => (
         <div className="job-tile" key={job.id}>
           <div className="job-title-location">
-            <div clasName="title">{job.title}</div>
-            <div clasName="location">{job.location}</div>
+            <div className="title">{job.title}</div>
+            <div className="location">{job.location}</div>
           </div>
-          <div clasName="posted">{job.posted}</div>
+          <div className="posted">{job.posted}</div>
           <div className="sponsorhip">{job.sponsorship}</div>
           <div className="status">{job.status}</div>
           <button className="edit-button" onClick={() => {props.editJob(job) || history.push("/edit-job")}}>
