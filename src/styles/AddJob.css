@@ -1,3 +1,62 @@
+.add-job-container {
+  margin-top: 140px;
+  width: 70%;
+  height: 75%;
+  background: #FFFFFF;
+  border: 1px solid #d4d2d0;
+  border-radius: 8px;
+}
+
+.add-job-headers {
+  height: 70px;
+  padding: 16px 0 0 30px;
+  border-bottom: 1px solid #d4d2d0;
+}
+
+.add-job-heading {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+}
+
+.add-job--sub-heading {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
 .add-job-form {
-  padding-top: 100px;
+  height: 510px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.job-title {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.add-job-input {
+  width: 288px;
+  height: 44px;
+  bottom: 25px;
+  border: 1px solid #949494;
+  border-radius: 8px;
+}
+
+.add-job-footer{
+  height: 70px;
+  border-top: 1px solid #d4d2d0;
 }

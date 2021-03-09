@@ -33,27 +33,32 @@ const AddJob = (props) => {
   }
 
 	return (
-		<form className="add-job-form">
-      <label>title</label>
-      <input
-        type="text"
-        name="title"
-        value={job.title}
-        onChange={handleInputChange}
-      />
-      <label>location</label>
-        <input type="text" name="location" value={job.location} onChange={handleInputChange} />
-      <label>posted</label>
-        <input type="text" name="posted" value={job.posted} onChange={handleInputChange} />
-      <label>sponsorship</label>
-        <input type="text"name="sponsorship" value={job.sponsorship} onChange={handleInputChange} />
-      <label>status</label>
-        <input type="text" name="status" value={job.status} onChange={handleInputChange}/>
-      <button onClick={handleSubmit}>submit</button>
-      <button onClick={handleCancel} className="edit-button">
-        Cancel
-      </button>
-    </form>
+    <div className="add-job-container">
+      <div className="add-job-headers">
+      <div className="add-job-heading">
+        Add a new job
+      </div>
+      <div className="add-job--sub-heading">
+        Fill out the information to post your new job listing.
+      </div>
+      </div>
+      <form className="add-job-form">
+        <label className="label">Job title</label>
+          <input className="add-job-input" type="text" name="title" value={job.title} onChange={handleInputChange} />
+        <label className="label">Location</label>
+          <input className="add-job-input" type="text" name="location" value={job.location} onChange={handleInputChange} />
+        {/* <label>posted</label>
+          <input type="text" name="posted" value={job.posted} onChange={handleInputChange} /> */}
+        <label className="label">Sponsorship</label>
+          <input className="add-job-input" type="text"name="sponsorship" value={job.sponsorship} onChange={handleInputChange} />
+        <label className="label">Status</label>
+          <input className="add-job-input" type="text" name="status" value={job.status} onChange={handleInputChange}/>
+      </form>
+      <div className="add-job-footer">
+        <button onClick={handleSubmit}>submit</button>
+        <button onClick={handleCancel} className="edit-button">Cancel</button>
+      </div>
+    </div>
 	)
 }
 
