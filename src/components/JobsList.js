@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import CurrentDate from './CurrentDate';
 import '../styles/JobsList.css';
 
 // JobList component where pass down props: jobs & editJob
@@ -24,9 +25,9 @@ const JobsList = (props) => {
             <div className="title">{job.title}</div>
             <div className="location">{job.location}</div>
           </div>
-          <div className="posted">{job.posted}</div>
-          <div className="sponsorhip">{job.sponsorship}</div>
-          <div className="status">{job.status}</div>
+            <div className="posted"><CurrentDate /></div>
+            <div className="sponsorship">{job.sponsorship}</div>
+            <div className="status">{job.status}</div>
           <button className="edit-button" onClick={() => {props.editJob(job) || history.push("/edit-job")}}>
             Edit
           </button>

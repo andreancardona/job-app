@@ -41,7 +41,7 @@
 }
 
 .header-title {
-  padding: 0 100px 0 10px;
+  padding: 0 140px 0 15px;
 }
 
 .header-status {
@@ -103,8 +103,27 @@
   font-weight: 400;
   line-height: 21px;
   letter-spacing: 0em;
-  text-align: left;
   color: #949494;
+}
+
+.sponsorship {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color:#2d2d2d;
+}
+
+.status {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color:#2d2d2d;
 }
 
 @media screen and (max-width: 600px) {
