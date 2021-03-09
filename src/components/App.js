@@ -11,10 +11,10 @@ const App = () => {
   const jobsList = [
     { id: 1, title: 'Astronaut', location: 'Austin, TX', posted: '', sponsorship: 'yes', status: 'none' },
     { id: 2, title: 'Barista', location: 'Austin, TX', posted: '', sponsorship: 'yes', status: 'none'},
-    { id: 3, title: 'Dancer', location: 'Austin, TX',posted: '', sponsorship: 'yes', status: 'none' },
+    { id: 3, title: 'Dancer', location: 'Austin, TX', posted: '', sponsorship: 'yes', status: 'none' },
   ]
 
-  const initialFormState = { id: '', title: '', location: '', posted: '', sponsorship: '', status: '' };
+  const initialFormState = { id: '', title: '', location: '', sponsorship: '', status: '' };
 
   // Set our state / Read our list of jobs
   const [ jobs, setJobs ] = useState(jobsList)
@@ -29,7 +29,6 @@ const App = () => {
     id: job.id, 
     title: job.title, 
     location: job.location, 
-    posted: job.posted, 
     sponsorship: job.sponsorship, 
     status: job.status 
   })
