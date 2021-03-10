@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/AddJobButton.css';
+import '../styles/addJobButton.css';
 import { useHistory } from 'react-router-dom';
 
 const AddJobButton = () => {

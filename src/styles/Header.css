@@ -3,7 +3,6 @@
 .header-container {
   margin-top: 150px;
   width: 70%;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,7 +15,6 @@
   font-size: 28px;
   line-height: 35px;
   color: #2d2d2d;
-
   display: flex;
   flex-direction: row;
 }

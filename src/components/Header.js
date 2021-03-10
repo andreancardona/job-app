@@ -1,6 +1,6 @@
 import React from 'react';
 import AddJobButton from './AddJobButton';
-import '../styles/Header.css';
+import '../styles/header.css';
 
 
 const Header = (props) => {
@@ -9,7 +9,7 @@ const Header = (props) => {
       <div className="header-jobs">
         Jobs 
         <div className="listings-count">{props.jobs.length} listings</div>
-        </div>
+      </div>
       <AddJobButton />
     </div>
   )

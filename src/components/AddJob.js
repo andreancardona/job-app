@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import '../styles/AddJobButton.css';
+import '../styles/addJobButton.css';
 import '../styles/AddJob.css';
 
 const AddJob = (props) => {

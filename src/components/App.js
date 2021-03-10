@@ -1,13 +1,21 @@
 import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navigation from './Navigation';
 import Header from './Header';
 import JobsList from '../components/JobsList';
 import EditJob from './EditJob';
 import AddJob from '../components/AddJob.js';
-import '../styles/App.css';
+import '../styles/app.css';
 
 const App = () => {
-  // Our list of jobs
+  // Navigation props
+  const navProps = {
+    title: 'JobHob',
+    userName: 'Andrea Batlle',
+    userRole: 'Admin'
+  }
+
+  // Initial list of jobs
   const jobsList = [
     { id: 1, title: 'Product Manager', location: 'Austin, TX', posted: '10/04/2020', sponsorship: 'Free', status: 'Open' },
     { id: 2, title: 'CEO', location: 'Austin, TX', posted: '12/30/2020', sponsorship: 'Sponsored', status: 'Paused'},
@@ -52,25 +60,26 @@ const App = () => {
 
   return (
     <div className="app-container">
+      <Navigation props={navProps}/>
       <Router>
           <Switch>
             <Route path="/home" component={() => 
-            <Fragment>
-              <Header jobs={jobs}/>
-              <JobsList jobs={jobs} editJob={editJob} addJob={addJob}/>
-            </Fragment>
+              <Fragment>
+                <Header jobs={jobs}/>
+                <JobsList jobs={jobs} editJob={editJob}/>
+              </Fragment>
             } />
             <Route path="/edit-job" component={() => 
-            <EditJob
-              jobs={jobs}
-              editing={editing}
-              setEditing={setEditing}
-              currentJob={currentJob}
-              updateJob={updateJob}
-            />  
+              <EditJob
+                jobs={jobs}
+                editing={editing}
+                setEditing={setEditing}
+                currentJob={currentJob}
+                updateJob={updateJob}
+              />  
             } />
             <Route path="/add-job" component={() => 
-            <AddJob jobs={jobs} addJob={addJob} setEditing={setEditing}/> 
+              <AddJob jobs={jobs} addJob={addJob} setEditing={setEditing}/> 
           }/> 
           </Switch>
       </Router>
