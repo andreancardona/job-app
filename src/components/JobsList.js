@@ -25,12 +25,14 @@ const JobsList = (props) => {
             <div className="title">{job.title}</div>
             <div className="location">{job.location}</div>
           </div>
+          <div className="job-details">
             <div className="posted"><CurrentDate /></div>
             <div className="sponsorship">{job.sponsorship}</div>
             <div className="status">{job.status}</div>
-          <button className="edit-button" onClick={() => {props.editJob(job) || history.push("/edit-job")}}>
-            Edit
-          </button>
+            <button className="edit-button" onClick={() => {props.editJob(job) || history.push("/edit-job")}}>
+              Edit
+            </button>
+          </div>
           <div>
           </div>
         </div>
