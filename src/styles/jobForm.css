@@ -1,4 +1,4 @@
-.add-job-container {
+.job-form-container {
   margin-top: 140px;
   width: 70%;
   height: 75%;
@@ -8,26 +8,26 @@
 }
 
 @media screen and (max-width: 768px) {
-  .add-job-container {
+  .job-form-container {
     width: 95%;
     height: 90%;
     margin-top: 70px;
   }
 }
 
-.add-job-headers {
+.form-headers {
   height: 80px;
   padding: 25px 0 0 30px;
   border-bottom: 1px solid #d4d2d0;
 }
 
 @media screen and (max-width: 768px) {
-  .add-job-headers {
+  .form-headers {
     padding: 20px;
   }
 }
 
-.add-job-heading {
+.form-heading {
   font-family: "Noto Sans";
   font-size: 20px;
   font-style: normal;
@@ -36,7 +36,7 @@
   letter-spacing: 0em;
 }
 
-.add-job--sub-heading {
+.form-sub-heading {
   font-family: "Noto Sans";
   font-size: 16px;
   font-style: normal;
@@ -45,7 +45,7 @@
   letter-spacing: 0em;
 }
 
-.add-job-form {
+.job-form {
   height: 460px;
   display: flex;
   flex-direction: column;
@@ -137,14 +137,14 @@ select {
   background-color: #ffff;
 }
 
-.footer-button-container {
-  margin: 18px 18px 0 0;
-  float: right;
-}
-
-.add-job-footer {
+.job-form--footer {
   height: 70px;
   border-top: 1px solid #d4d2d0;
+}
+
+.footer-buttons{
+  margin: 18px 18px 0 0;
+  float: right;
 }
 
 .cancel-button {
@@ -161,4 +161,19 @@ select {
   height: 44px;
   border: 1px solid #d4d2d0;
   margin-right: 15px;
+}
+
+.update-button {
+  color: #ffff;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background: #085FF7;
+  padding: 13px 16px 13px 16px;
+  border-radius: 8px;
+  width: 91px;
+  height: 44px;
+  border: none;
 }

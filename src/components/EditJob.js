@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import '../styles/EditJob.css';
+import '../styles/jobForm.css';
 
 const EditJob = (props) => {
   const [ job, setJob ] = useState(props.currentJob)
@@ -32,17 +32,17 @@ const EditJob = (props) => {
   }
 
   return (
-    <div className="edit-job-container">
-      <div className="edit-job-headers">
-        <div className="edit-job-heading">
+    <div className="job-form-container">
+      <div className="form-headers">
+        <div className="form-heading">
           Edit job
         </div>
-        <div className="edit-job--sub-heading">
+        <div className="form-sub-heading">
           Edit the information for your listing.
         </div>
       </div>
-      <form className="edit-job-form">
-        <label className="label">Title</label>
+      <form className="job-form">
+        <label className="label">Job title</label>
           <div className="sub-label">What is name of the role?</div>
           <input className="input" type="text" name="title" value={job.title} onChange={handleInputChange} />
         <label className="label">Location</label>
@@ -51,21 +51,19 @@ const EditJob = (props) => {
         <label  className="label">Sponsorship</label>
           <div className="sub-label">Do you want to promote this job?</div>
           <select className="select-input" onChange={handleInputChange} name="sponsorship" value={job.sponsorship}>
-            <option value="Option"></option>
             <option value="Sponsor">Sponsor</option>
             <option value="Free">Free</option>
           </select>
         <label className="label">Status</label>
           <div className="sub-label">Are you ready to make this job listing public?</div>
           <select className="select-input" onChange={handleInputChange} name="status" value={job.status}>
-            <option value="Option"></option>
             <option value="Open">Open</option>
             <option value="Paused">Paused</option>
             <option value="Closed">Closed</option>
           </select>
       </form>
-      <div className="edit-job-footer">
-        <div className="footer-button-container">
+      <div className="job-form--footer">
+        <div className="footer-buttons">
           <button className="cancel-button" onClick={handleCancel}>Cancel</button>
           <button className="update-button" onClick={handleSubmit}>Save</button>
         </div>

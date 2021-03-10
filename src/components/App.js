@@ -22,27 +22,33 @@ const App = () => {
     { id: 3, title: 'Software Engineer', location: 'Seattle, WA', posted: '11/18/2020', sponsorship: 'Free', status: 'Closed' },
   ]
 
-  const initialState = { id: '', title: '', location: '', sponsorship: '', status: '' };
+  // Initial state of our job form
+  const initialJobForm = { id: '', title: '', location: '', sponsorship: '', status: '' };
 
-  // Set our state / Read our list of jobs
+  // Set our state / read our list of jobs
   const [ jobs, setJobs ] = useState(jobsList)
-	const [ currentJob, setCurrentJob ] = useState(initialState)
+	const [ currentJob, setCurrentJob ] = useState(initialJobForm)
 	const [ editing, setEditing ] = useState(false)
   const [ adding, setAdding ] = useState(false)
 
 
- // Allow user to edit job
- const editJob = (job) => {
-  setEditing(true)
+  // Allow user to edit job
+  const editJob = (job) => {
+    setEditing(true)
 
-  setCurrentJob({ 
-    id: job.id, 
-    title: job.title, 
-    location: job.location, 
-    sponsorship: job.sponsorship, 
-    status: job.status 
-  })
-}
+    setCurrentJob({ 
+      id: job.id, 
+      title: job.title, 
+      location: job.location, 
+      sponsorship: job.sponsorship, 
+      status: job.status 
+    })
+  }
+
+  // Take user to add job form
+  const setAdd = () => {
+    setAdding(true);
+  }
 
   // Add a job
   const addJob = (job) => {
@@ -51,10 +57,6 @@ const App = () => {
 
 		setJobs(newJobs);
 	}
-
-  const setAdd = () => {
-    setAdding(true);
-  }
 
   // Update a job
   const updateJob = (id, jobBeingUpdated) => {
@@ -90,10 +92,20 @@ const App = () => {
                 setAdding={setAdding} 
                 jobs={jobs} 
                 addJob={addJob} 
+                edditing={editing}
                 setEditing={setEditing}
                 />
-              : null 
+              : <AddJob 
+                adding={adding}
+                setAdding={setAdding} 
+                jobs={jobs} 
+                addJob={addJob} 
+                edditing={editing}
+                setEditing={setEditing}
+                /> 
             } /> 
+            {console.log('edit', editing)}
+            {console.log('add', adding)}
           </Switch>
       </Router>
     </div>
