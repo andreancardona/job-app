@@ -2,17 +2,12 @@ import React from 'react';
 import '../styles/addJobButton.css';
 import { useHistory } from 'react-router-dom';
 
-const AddJobButton = () => {
+const AddJobButton = (props) => {
+  
   let history = useHistory();
 
-  const handleClick = (event) => {
-    event.preventDefault()
-
-    history.push("/add-job")
-  }
-
   return (
-    <button className="add-job-button" onClick={handleClick}>Add job</button>
+    <button className="add-job-button" onClick={() => {props.setAdd() || history.push("/job-form")}}>Add job</button>
   )
 }
 

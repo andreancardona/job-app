@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/CurrentDate.css';
+import '../styles/currentDate.css';
 
 const CurrentDate = () => {
   const [currentDate, setCurrentDate] = useState(new Date());

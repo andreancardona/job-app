@@ -28,6 +28,8 @@ const App = () => {
   const [ jobs, setJobs ] = useState(jobsList)
 	const [ currentJob, setCurrentJob ] = useState(initialState)
 	const [ editing, setEditing ] = useState(false)
+  const [ adding, setAdding ] = useState(false)
+
 
  // Allow user to edit job
  const editJob = (job) => {
@@ -50,6 +52,10 @@ const App = () => {
 		setJobs(newJobs);
 	}
 
+  const setAdd = () => {
+    setAdding(true);
+  }
+
   // Update a job
   const updateJob = (id, jobBeingUpdated) => {
 		setEditing(false)
@@ -65,22 +71,29 @@ const App = () => {
           <Switch>
             <Route path="/home" component={() => 
               <Fragment>
-                <Header jobs={jobs}/>
+                <Header jobs={jobs} addJob={addJob} setAdd={setAdd}/>
                 <JobsList jobs={jobs} editJob={editJob}/>
               </Fragment>
             } />
-            <Route path="/edit-job" component={() => 
-              <EditJob
+            <Route path="/job-form" component={() => 
+              editing
+              ? <EditJob
                 jobs={jobs}
                 editing={editing}
                 setEditing={setEditing}
                 currentJob={currentJob}
                 updateJob={updateJob}
-              />  
-            } />
-            <Route path="/add-job" component={() => 
-              <AddJob jobs={jobs} addJob={addJob} setEditing={setEditing}/> 
-          }/> 
+                /> 
+              : adding ? 
+              <AddJob 
+                adding={adding}
+                setAdding={setAdding} 
+                jobs={jobs} 
+                addJob={addJob} 
+                setEditing={setEditing}
+                />
+              : null 
+            } /> 
           </Switch>
       </Router>
     </div>

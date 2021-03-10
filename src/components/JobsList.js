@@ -7,8 +7,6 @@ import '../styles/jobsList.css';
 
 const JobsList = (props) => {
 
-  console.log(props)
-
   const jobListHeaders = {
     title: 'Job Title',
     posted: 'Posted',

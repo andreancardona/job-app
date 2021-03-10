@@ -9,11 +9,11 @@ const AddJob = (props) => {
 
 
 	const handleInputChange = (event) => {
+    console.log('AddJob', event);
 		const { name, value } = event.target
 
 		setJob({ ...job, [name]: value })
-
-    console.log(job, 'some job')
+    console.log('some job', job)
 	}
 
   let history = useHistory();
@@ -21,15 +21,12 @@ const AddJob = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if(!job.title || !job.location || !job.sponsorship || !job.status) 
-    
     return
 
       props.addJob(job);
         setJob(initialState);
       
       history.push("/home")
-
-      console.log('some job', job)
   };
 
   const handleCancel = (event) => {
@@ -60,12 +57,14 @@ const AddJob = (props) => {
         <label className="label">Sponsorship</label>
           <div className="sub-label">Do you want to promote this job?</div>    
             <select className="select-input" onChange={handleInputChange} name="sponsorship" value={job.sponsorship}>
+              <option value="Option"></option>
               <option value="Sponsor">Sponsor</option>
               <option value="Free">Free</option>
             </select>
         <label className="label">Status</label>
           <div className="sub-label">Are you ready to make this job listing public?</div> 
             <select className="select-input" onChange={handleInputChange} name="status" value={job.status}>
+              <option value="Option"></option>
               <option value="Open">Open</option>
               <option value="Paused">Paused</option>
               <option value="Closed">Closed</option>
