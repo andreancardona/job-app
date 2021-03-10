@@ -1,3 +1,179 @@
+.edit-job-container {
+  margin-top: 140px;
+  width: 70%;
+  height: 75%;
+  background: #FFFFFF;
+  border: 1px solid #d4d2d0;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .edit-job-container {
+    width: 95%;
+    height: 90%;
+    margin-top: 70px;
+  }
+}
+
+.edit-job-headers {
+  height: 80px;
+  padding: 25px 0 0 30px;
+  border-bottom: 1px solid #d4d2d0;
+}
+
+@media screen and (max-width: 768px) {
+  .edit-job-headers {
+    padding: 20px;
+  }
+}
+
+.edit-job-heading {
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+}
+
+.edit-job--sub-heading {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
 .edit-job-form {
-  padding-top: 100px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.label {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.sub-label {
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #767676;
+}
+
+input {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 10px;
+}
+
+select {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;  
+  padding: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../images/caret.svg");
+  background-position: 260px center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  select {
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;  
+    padding: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../images/caret.svg");
+    background-position: 260px center;
+    background-repeat: no-repeat;
+  }
+}
+
+.input {
+  width: 274px;
+  height: 40px;
+  border: 1px solid #949494;
+  border-radius: 8px;
+}
+
+.select-input {
+  width: 288px;
+  height: 44px;
+  border: 1px solid #949494;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #ffff;
+}
+
+
+.footer-button-container {
+  margin: 18px 18px 0 0;
+  float: right;
+}
+
+.edit-job-footer {
+  height: 70px;
+  border-top: 1px solid #d4d2d0;
+}
+
+.update-button {
+  color: #ffff;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background: #085FF7;
+  padding: 13px 16px 13px 16px;
+  border-radius: 8px;
+  width: 91px;
+  height: 44px;
+  border: none;
+}
+
+.cancel-button {
+  color: #085FF7;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background: #ffff;
+  padding: 13px, 16px, 13px, 16px;
+  border-radius: 8px;
+  width: 91px;
+  height: 44px;
+  border: 1px solid #d4d2d0;
+  margin-right: 15px;
 }

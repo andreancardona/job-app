@@ -62,6 +62,17 @@
   text-align: left;
 }
 
+.sub-label {
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #767676;
+}
+
 input {
   font-family: "Helvetica Neue";
   font-size: 16px;
@@ -109,17 +120,6 @@ select {
   }
 }
 
-.sub-label {
-  font-family: "Helvetica Neue";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #767676;
-}
-
 .input {
   width: 274px;
   height: 40px;
@@ -137,6 +137,11 @@ select {
   background-color: #ffff;
 }
 
+.footer-button-container {
+  margin: 18px 18px 0 0;
+  float: right;
+}
+
 .add-job-footer {
   height: 70px;
   border-top: 1px solid #d4d2d0;
@@ -150,15 +155,10 @@ select {
   font-size: 16px;
   line-height: 18px;
   background: #ffff;
-  padding: 13px, 16px, 13px, 16px;
+  padding: 13px 16px 13px 16px;
   border-radius: 8px;
   width: 91px;
   height: 44px;
   border: 1px solid #d4d2d0;
   margin-right: 15px;
-}
-
-.footer-button-container {
-  margin: 18px 18px 0 0;
-  float: right;
 }

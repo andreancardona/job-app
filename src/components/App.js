@@ -9,9 +9,9 @@ import '../styles/App.css';
 const App = () => {
   // Our list of jobs
   const jobsList = [
-    { id: 1, title: 'Astronaut', location: 'Austin, TX', posted: '', sponsorship: 'yes', status: 'none' },
-    { id: 2, title: 'Barista', location: 'Austin, TX', posted: '', sponsorship: 'yes', status: 'none'},
-    { id: 3, title: 'Dancer', location: 'Austin, TX', posted: '', sponsorship: 'yes', status: 'none' },
+    { id: 1, title: 'Product Manager', location: 'Austin, TX', posted: '10/04/2020', sponsorship: 'Free', status: 'Open' },
+    { id: 2, title: 'CEO', location: 'Austin, TX', posted: '12/30/2020', sponsorship: 'Sponsored', status: 'Paused'},
+    { id: 3, title: 'Software Engineer', location: 'Seattle, WA', posted: '11/18/2020', sponsorship: 'Free', status: 'Closed' },
   ]
 
   const initialState = { id: '', title: '', location: '', sponsorship: '', status: '' };
@@ -61,14 +61,13 @@ const App = () => {
             </Fragment>
             } />
             <Route path="/edit-job" component={() => 
-            editing ?
             <EditJob
               jobs={jobs}
               editing={editing}
               setEditing={setEditing}
               currentJob={currentJob}
               updateJob={updateJob}
-            /> : null 
+            />  
             } />
             <Route path="/add-job" component={() => 
             <AddJob jobs={jobs} addJob={addJob} setEditing={setEditing}/> 

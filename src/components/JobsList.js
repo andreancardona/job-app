@@ -26,7 +26,7 @@ const JobsList = (props) => {
             <div className="location">{job.location}</div>
           </div>
           <div className="job-details">
-            <div className="posted"><CurrentDate /></div>
+          <div className="posted">{job.posted ? job.posted : <CurrentDate />}</div>
             <div className="sponsorship">{job.sponsorship}</div>
             <div className="status">{job.status}</div>
             <button className="edit-button" onClick={() => {props.editJob(job) || history.push("/edit-job")}}>

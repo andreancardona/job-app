@@ -60,15 +60,14 @@ const AddJob = (props) => {
         <label className="label">Sponsorship</label>
           <div className="sub-label">Do you want to promote this job?</div>    
             <select className="select-input" onChange={handleInputChange} name="sponsorship" value={job.sponsorship}>
-              <option value="sponsorship">Sponsorship</option>
-              <option value="free">Free</option>
-              <option value="Unknow">Unkown</option>
+              <option value="Sponsor">Sponsor</option>
+              <option value="Free">Free</option>
             </select>
         <label className="label">Status</label>
           <div className="sub-label">Are you ready to make this job listing public?</div> 
             <select className="select-input" onChange={handleInputChange} name="status" value={job.status}>
-              <option value="open">Open</option>
-              <option value="pending">Pending</option>
+              <option value="Open">Open</option>
+              <option value="Paused">Paused</option>
               <option value="Closed">Closed</option>
             </select>
       </form>
