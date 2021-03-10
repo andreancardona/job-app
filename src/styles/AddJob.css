@@ -48,6 +48,34 @@
   text-align: left;
 }
 
+input {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 10px;
+}
+
+select {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;  
+  padding: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../images/caret.svg");
+  background-position: 260px center;
+  background-repeat: no-repeat;
+}
+
 .sub-label {
   font-family: "Helvetica Neue";
   font-size: 14px;
@@ -59,7 +87,15 @@
   color: #767676;
 }
 
-.add-job-input {
+.input {
+  width: 274px;
+  height: 40px;
+  border: 1px solid #949494;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.select-input {
   width: 288px;
   height: 44px;
   border: 1px solid #949494;
@@ -67,7 +103,28 @@
   margin-bottom: 15px;
 }
 
-.add-job-footer{
+.add-job-footer {
   height: 70px;
   border-top: 1px solid #d4d2d0;
+}
+
+.cancel-button {
+  color: #085FF7;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background: #ffff;
+  padding: 13px, 16px, 13px, 16px;
+  border-radius: 8px;
+  width: 91px;
+  height: 44px;
+  border: 1px solid #d4d2d0;
+  margin-right: 15px;
+}
+
+.footer-button-container {
+  margin: 18px 18px 0 0;
+  float: right;
 }

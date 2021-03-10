@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import '../styles/AddJobButton.css';
 import '../styles/AddJob.css';
 
 const AddJob = (props) => {
-  const initialFormState = { id: '', title: '', location: '', sponsorship: '', status: '' };
-	const [ job, setJob ] = useState(initialFormState);
+  const initialState = { id: '', title: '', location: '', sponsorship: '', status: '' };
+	const [ job, setJob ] = useState(initialState);
 
 
 	const handleInputChange = (event) => {
@@ -24,7 +25,7 @@ const AddJob = (props) => {
     return
 
       props.addJob(job);
-        setJob(initialFormState);
+        setJob(initialState);
       
       history.push("/home")
 
@@ -52,28 +53,30 @@ const AddJob = (props) => {
       <form className="add-job-form">
         <label className="label">Job title</label>
           <div className="sub-label">What is name of the role?</div>
-          <input className="add-job-input" type="text" name="title" value={job.title} onChange={handleInputChange} />
+          <input className="input" type="text" name="title" value={job.title} onChange={handleInputChange} />
         <label className="label">Location</label>
           <div className="sub-label">Where is this job?</div>
-          <input className="add-job-input" type="text" name="location" value={job.location} onChange={handleInputChange} />
+          <input className="input" type="text" name="location" value={job.location} onChange={handleInputChange} />
         <label className="label">Sponsorship</label>
           <div className="sub-label">Do you want to promote this job?</div>    
-            <select className="add-job-input" onChange={handleInputChange} name="sponsorship" value={job.sponsorship}>
+            <select className="select-input" onChange={handleInputChange} name="sponsorship" value={job.sponsorship}>
               <option value="sponsorship">Sponsorship</option>
               <option value="free">Free</option>
               <option value="Unknow">Unkown</option>
             </select>
         <label className="label">Status</label>
-          <div className="sub-label">Are you ready to make this job listing public?</div>    
-            <select className="add-job-input" onChange={handleInputChange} name="status" value={job.status}>
+          <div className="sub-label">Are you ready to make this job listing public?</div> 
+            <select className="select-input" onChange={handleInputChange} name="status" value={job.status}>
               <option value="open">Open</option>
               <option value="pending">Pending</option>
               <option value="Closed">Closed</option>
             </select>
       </form>
       <div className="add-job-footer">
-        <button onClick={handleSubmit}>submit</button>
-        <button onClick={handleCancel} className="edit-button">Cancel</button>
+        <div className="footer-button-container">
+          <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+          <button className="add-job-button" onClick={handleSubmit}>Add job</button>
+        </div>
       </div>
     </div>
 	)

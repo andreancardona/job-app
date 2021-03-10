@@ -14,11 +14,11 @@ const App = () => {
     { id: 3, title: 'Dancer', location: 'Austin, TX', posted: '', sponsorship: 'yes', status: 'none' },
   ]
 
-  const initialFormState = { id: '', title: '', location: '', sponsorship: '', status: '' };
+  const initialState = { id: '', title: '', location: '', sponsorship: '', status: '' };
 
   // Set our state / Read our list of jobs
   const [ jobs, setJobs ] = useState(jobsList)
-	const [ currentJob, setCurrentJob ] = useState(initialFormState)
+	const [ currentJob, setCurrentJob ] = useState(initialState)
 	const [ editing, setEditing ] = useState(false)
 
  // Allow user to edit job
