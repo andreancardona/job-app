@@ -7,27 +7,9 @@ const AddJob = (props) => {
   const initialState = { id: '', title: '', location: '', sponsorship: 'Sponsor', status: 'Open' };
 	const [ job, setJob ] = useState(initialState);
 
-  // const [ job, setJob ] = useState(props.currentJob)
+  const header = 'Add a new job';
 
-  // useEffect(() => {setJob(props.currentJob)},[ props ])
-
-  const header = props.adding ? 'Add a new job' : 'Edit job'
-
-  const subHeader = props.adding ? 'Add a new job' : 'Edit job'
-
-  const labels = {
-    title: 'Job title',
-    location: 'Location',
-    sponsorship: 'Sponsorship',
-    status: 'Status'
-  }
-
-  const subLabels = {
-    title: 'What is the name of the role?',
-    location: 'Where is this job?',
-    sponsorship: 'Do you want to promote this job?',
-    status: 'Are you ready to make this job  pooosting  public?'
-  }
+  const subHeader = 'Fill out the information for your new job listing';
 
 	const handleInputChange = (event) => {
 		const { name, value } = event.target
@@ -57,7 +39,7 @@ const AddJob = (props) => {
     history.push("/home")
   }
 
-  console.log('addJOB', props.adding)
+  console.log('addJOB', props)
 
 	return (
     <div className="job-form-container">
@@ -70,20 +52,20 @@ const AddJob = (props) => {
         </div>
       </div>
       <form className="job-form">
-        <label className="label">{labels.title}</label>
-          <div className="sub-label">{subLabels.title}</div>
+        <label className="label">{props.labels.title}</label>
+          <div className="sub-label">{props.subLabels.title}</div>
           <input className="input" type="text" name="title" value={job.title} onChange={handleInputChange} />
-        <label className="label">{labels.location}</label>
-          <div className="sub-label">{subLabels.location}?</div>
+        <label className="label">{props.labels.location}</label>
+          <div className="sub-label">{props.subLabels.location}?</div>
           <input className="input" type="text" name="location" value={job.location} onChange={handleInputChange} />
-        <label className="label">{labels.sponsorship}</label>
-          <div className="sub-label">{subLabels.sponsorship}</div>    
+        <label className="label">{props.labels.sponsorship}</label>
+          <div className="sub-label">{props.subLabels.sponsorship}</div>    
             <select className="select-input" name="sponsorship" onChange={handleInputChange} value={job.sponsorship}>
               <option value="Sponsor">Sponsor</option>
               <option value="Free">Free</option>
             </select>
-        <label className="label">{labels.status}</label>
-          <div className="sub-label">{subLabels.status}</div> 
+        <label className="label">{props.labels.status}</label>
+          <div className="sub-label">{props.subLabels.status}</div> 
             <select className="select-input" onChange={handleInputChange} name="status" value={job.status}>
               <option value="Open">Open</option>
               <option value="Paused">Paused</option>

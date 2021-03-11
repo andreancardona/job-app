@@ -25,6 +25,22 @@ const App = () => {
   // Initial state of our job form
   const initialJobForm = { id: '', title: '', location: '', sponsorship: '', status: '' };
 
+  // Job form labels
+  const labels = {
+    title: 'Job title',
+    location: 'Location',
+    sponsorship: 'Sponsorship',
+    status: 'Status'
+  }
+
+  // Job form sub labels
+  const subLabels = {
+    title: 'What is the name of the role?',
+    location: 'Where is this job?',
+    sponsorship: 'Do you want to promote this job?',
+    status: 'Are you ready to make this job  pooosting  public?'
+  }
+
   // Set our state / read our list of jobs
   const [ jobs, setJobs ] = useState(jobsList)
 	const [ currentJob, setCurrentJob ] = useState(initialJobForm)
@@ -80,6 +96,8 @@ const App = () => {
             <Route path="/job-form" component={() => 
               editing
               ? <EditJob
+                labels={labels}
+                subLabels={subLabels}
                 jobs={jobs}
                 editing={editing}
                 setEditing={setEditing}
@@ -87,7 +105,9 @@ const App = () => {
                 updateJob={updateJob}
                 /> 
               : adding ? 
-              <AddJob 
+                <AddJob 
+                labels={labels}
+                subLabels={subLabels}
                 adding={adding}
                 setAdding={setAdding} 
                 jobs={jobs} 

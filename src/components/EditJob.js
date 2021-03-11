@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../styles/jobForm.css';
 
 const EditJob = (props) => {
   const [ job, setJob ] = useState(props.currentJob)
 
-  useEffect(() => {setJob(props.currentJob)},[ props ])
+  const header = 'Add a new job';
+
+  const subHeader = 'Fill out the information for your new job listing';
 
   const handleInputChange = (event) => {
     const { name, value } = event.target
@@ -35,27 +37,27 @@ const EditJob = (props) => {
     <div className="job-form-container">
       <div className="form-headers">
         <div className="form-heading">
-          Edit job
+          {header}
         </div>
         <div className="form-sub-heading">
-          Edit the information for your listing.
+          {subHeader}
         </div>
       </div>
       <form className="job-form">
-        <label className="label">Job title</label>
-          <div className="sub-label">What is name of the role?</div>
+        <label className="label">{props.labels.title}</label>
+          <div className="sub-label">{props.subLabels.title}</div>
           <input className="input" type="text" name="title" value={job.title} onChange={handleInputChange} />
-        <label className="label">Location</label>
-          <div className="sub-label">Where is this job?</div>
+        <label className="label">{props.labels.location}</label>
+          <div className="sub-label">{props.subLabels.location}</div>
           <input className="input" type="text" name="location" value={job.location} onChange={handleInputChange} />
-        <label  className="label">Sponsorship</label>
-          <div className="sub-label">Do you want to promote this job?</div>
+        <label  className="label">{props.labels.sponsorship}</label>
+          <div className="sub-label">{props.subLabels.sponsorship}</div>
           <select className="select-input" onChange={handleInputChange} name="sponsorship" value={job.sponsorship}>
             <option value="Sponsor">Sponsor</option>
             <option value="Free">Free</option>
           </select>
-        <label className="label">Status</label>
-          <div className="sub-label">Are you ready to make this job listing public?</div>
+        <label className="label">{props.labels.status}</label>
+          <div className="sub-label">{props.subLabels.status}</div>
           <select className="select-input" onChange={handleInputChange} name="status" value={job.status}>
             <option value="Open">Open</option>
             <option value="Paused">Paused</option>
