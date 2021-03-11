@@ -96,36 +96,36 @@ const App = () => {
             <Route path="/job-form" component={() => 
               editing
               ? <EditJob
-                labels={labels}
-                subLabels={subLabels}
-                jobs={jobs}
-                editing={editing}
-                setEditing={setEditing}
-                currentJob={currentJob}
-                updateJob={updateJob}
+                  labels={labels}
+                  subLabels={subLabels}
+                  jobs={jobs}
+                  editing={editing}
+                  setEditing={setEditing}
+                  currentJob={currentJob}
+                  updateJob={updateJob}
                 /> 
               : adding ? 
                 <AddJob 
-                labels={labels}
-                subLabels={subLabels}
-                adding={adding}
-                setAdding={setAdding} 
-                jobs={jobs} 
-                addJob={addJob} 
-                edditing={editing}
-                setEditing={setEditing}
+                  labels={labels}
+                  subLabels={subLabels}
+                  adding={adding}
+                  setAdding={setAdding} 
+                  jobs={jobs} 
+                  addJob={addJob} 
+                  edditing={editing}
+                  setEditing={setEditing}
                 />
               : <AddJob 
-                adding={adding}
-                setAdding={setAdding} 
-                jobs={jobs} 
-                addJob={addJob} 
-                edditing={editing}
-                setEditing={setEditing}
+                  labels={labels}
+                  subLabels={subLabels}
+                  adding={adding}
+                  setAdding={setAdding} 
+                  jobs={jobs} 
+                  addJob={addJob} 
+                  edditing={editing}
+                  setEditing={setEditing}
                 /> 
             } /> 
-            {console.log('edit', editing)}
-            {console.log('add', adding)}
           </Switch>
       </Router>
     </div>

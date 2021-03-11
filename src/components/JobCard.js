@@ -6,7 +6,7 @@ import '../styles/jobCard.css';
 const JobCard = (props) => {
 
   let history = useHistory();
-
+  
   return (
     props.jobs.map((job) => (
       <div className="job-card" key={job.id}>
