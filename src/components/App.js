@@ -89,7 +89,7 @@ const App = () => {
           <Switch>
             <Route path="/home" component={() => 
               <Fragment>
-                <Header jobs={jobs} addJob={addJob} setAdd={setAdd}/>
+                <Header jobs={jobs} setAdd={setAdd}/>
                 <JobsList jobs={jobs} editJob={editJob}/>
               </Fragment>
             } />
@@ -98,7 +98,7 @@ const App = () => {
               ? <EditJob
                   labels={labels}
                   subLabels={subLabels}
-                  jobs={jobs}
+                  setAdding={setAdding} 
                   editing={editing}
                   setEditing={setEditing}
                   currentJob={currentJob}
@@ -112,7 +112,6 @@ const App = () => {
                   setAdding={setAdding} 
                   jobs={jobs} 
                   addJob={addJob} 
-                  edditing={editing}
                   setEditing={setEditing}
                 />
               : <AddJob 
@@ -120,9 +119,7 @@ const App = () => {
                   subLabels={subLabels}
                   adding={adding}
                   setAdding={setAdding} 
-                  jobs={jobs} 
                   addJob={addJob} 
-                  edditing={editing}
                   setEditing={setEditing}
                 /> 
             } /> 

@@ -8,11 +8,19 @@ const JobForm = (props) => {
 		props.setJob({ ...props.job, [name]: value })
 	}
 
-
+  // Update header and subHeader based current form
   const header = props.adding ? 'Add a new job' : 'Edit a job';
 
   const subHeader = props.adding ? 'Fill out the information for your new job listing.' : 'Edit the information for your job listing.';
 
+  // const jobFormLabels = [
+  //   {
+  //     label: props.labels.title,
+  //     subLabel: props.subLabels.title,
+  //     input: props.job.title,
+  //   }
+  // ]
+  
   return (
     <Fragment>
       <div className="form-headers">
