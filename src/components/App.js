@@ -6,9 +6,10 @@ import JobsList from '../components/JobsList';
 import EditJob from './EditJob';
 import AddJob from '../components/AddJob.js';
 import '../styles/app.css';
-import '../styles/navigation.css';
+import '../styles/_navigation.scss';
 
 const App = () => {
+
   // Navigation props
   const navProps = {
     title: 'JobHob',

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import JobForm from './JobForm';
-import '../styles/addJobButton.css';
-import '../styles/jobForm.css';
+import '../styles/_buttons.scss';
+import '../styles/_job-form.scss';
 
 const AddJob = (props) => {
   const initialState = { id: '', title: '', location: '', sponsorship: 'Sponsor', status: 'Open' };
@@ -42,7 +42,7 @@ const AddJob = (props) => {
       <div className="job-form--footer">
         <div className="footer-buttons">
           <button className="cancel-button" onClick={handleCancel}>Cancel</button>
-          <button className="add-job-button" onClick={handleSubmit}>Add job</button>
+          <button className="add-save-button" onClick={handleSubmit}>Add job</button>
         </div>
       </div>
     </div>

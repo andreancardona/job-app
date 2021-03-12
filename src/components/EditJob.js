@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import JobForm from './JobForm';
-import '../styles/jobForm.css';
+import '../styles/_job-form.scss';
+import '../styles/_buttons.scss';
 
 const EditJob = (props) => {
   const [ job, setJob ] = useState(props.currentJob)
@@ -37,7 +38,7 @@ const EditJob = (props) => {
       <div className="job-form--footer">
         <div className="footer-buttons">
           <button className="cancel-button" onClick={handleCancel}>Cancel</button>
-          <button className="update-button" onClick={handleSubmit}>Save</button>
+          <button className="add-save-button" onClick={handleSubmit}>Save</button>
         </div>
       </div>
     </div>

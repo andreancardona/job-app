@@ -1,0 +1,59 @@
+/* button style varaibles */
+
+$color-text: #ffff;
+$add-background-color: #085ff7;
+$edit-color-text: #085ff7;
+$edit-background-color: #ffff;
+
+// fonts
+$helvetica-font: "Helvetica Neue";
+
+.add-save-button {
+  color: $color-text;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background: $add-background-color;
+  padding: 13px, 16px, 13px, 16px;
+  border-radius: 8px;
+  width: 91px;
+  height: 44px;
+  border: none;
+}
+
+/* edit button */
+
+.edit-button {
+  color: $edit-color-text;
+  font-family: $helvetica-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background: $edit-background-color;
+  padding: 13px, 16px, 13px, 16px;
+  margin-left: 40px;
+  border-radius: 8px;
+  width: 62px;
+  height: 44px;
+  border: 1px solid #d4d2d0;
+}
+
+/* cancel button */
+
+.cancel-button {
+  color: $edit-color-text;
+  font-family: $helvetica-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  background: $edit-background-color;
+  padding: 13px 16px 13px 16px;
+  border-radius: 8px;
+  width: 91px;
+  height: 44px;
+  border: 1px solid #d4d2d0;
+  margin-right: 15px;
+}

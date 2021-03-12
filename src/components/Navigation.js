@@ -1,11 +1,11 @@
 import React from 'react';
 import profilePlaceholder from '../images/profilePlaceholder.svg';
-import '../styles/navigation.css';
+import '../styles/_navigation.scss';
 
 const Navigation = ({ props }) => {
   
   return (
-    <nav className="nav-container">
+    <nav id="nav" className="nav-container">
       <div className="nav-title">{props.title}</div>
       <a className="skip-content" href='#main'>Skip to main content</a>
       <div className="user-profile">

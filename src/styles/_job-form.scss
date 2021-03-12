@@ -1,8 +1,10 @@
+@import './buttons';
+
 .job-form-container {
   margin-top: 140px;
   width: 70%;
   height: 75%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #d4d2d0;
   border-radius: 8px;
 }
@@ -53,7 +55,7 @@
 }
 
 .label {
-  font-family: "Helvetica Neue";
+  font-family: $helvetica-font;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -63,7 +65,7 @@
 }
 
 .sub-label {
-  font-family: "Helvetica Neue";
+  font-family: $helvetica-font;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -74,7 +76,7 @@
 }
 
 input {
-  font-family: "Helvetica Neue";
+  font-family: $helvetica-font;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -85,13 +87,13 @@ input {
 }
 
 select {
-  font-family: "Helvetica Neue";
+  font-family: $helvetica-font;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
-  text-align: left;  
+  text-align: left;
   padding: 10px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -103,13 +105,13 @@ select {
 
 @media screen and (max-width: 768px) {
   select {
-    font-family: "Helvetica Neue";
+    font-family: $helvetica-font;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
-    text-align: left;  
+    text-align: left;
     padding: 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -142,25 +144,9 @@ select {
   border-top: 1px solid #d4d2d0;
 }
 
-.footer-buttons{
+.footer-buttons {
   margin: 18px 18px 0 0;
   float: right;
-}
-
-.cancel-button {
-  color: #085FF7;
-  font-family: Helvetica Neue;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  background: #ffff;
-  padding: 13px 16px 13px 16px;
-  border-radius: 8px;
-  width: 91px;
-  height: 44px;
-  border: 1px solid #d4d2d0;
-  margin-right: 15px;
 }
 
 .update-button {
@@ -170,7 +156,7 @@ select {
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
-  background: #085FF7;
+  background: #085ff7;
   padding: 13px 16px 13px 16px;
   border-radius: 8px;
   width: 91px;

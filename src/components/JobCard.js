@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import CurrentDate from './CurrentDate';
+import CurrentDate from '../utils/CurrentDate';
 import '../styles/jobCard.css';
 
 const JobCard = (props) => {

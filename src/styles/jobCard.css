@@ -112,23 +112,6 @@
   color:#2d2d2d;
 }
 
-/* edit button */
-
-.edit-button {
-  color: #085FF7;
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  background: #ffff;
-  padding: 13px, 16px, 13px, 16px;
-  margin-left: 40px;
-  border-radius: 8px;
-  width: 62px;
-  height: 44px;
-  border: 1px solid #d4d2d0;
-}
 
 @media screen and (max-width: 768px) {
   .edit-button {
