@@ -15,13 +15,13 @@ const JobsList = (props) => {
   }
 
   return (
-    <div className="jobs-list-container">
-      <section className="jobs-list-headers" tabIndex="0">
-        <div className="header-title">{jobListHeaders.title}</div>
-        <div className="header-posted">{jobListHeaders.posted}</div>
-        <div className="header-sponsorship">{jobListHeaders.sponsorship}</div>
-        <div className="header-status">{jobListHeaders.status}</div>
-      </section>
+    <div aria-hidden="true" className="jobs-list-container" role="grid" id="job-list">
+      <div id="job-list-headers" className="jobs-list-headers" tabIndex="0" role="row" aria-label="jobs listings">
+        <div className="header-title" aria-label="title">{jobListHeaders.title}</div>
+        <div className="header-posted" aria-label="posted">{jobListHeaders.posted}</div>
+        <div className="header-sponsorship"  aria-label="sponsorhsip">{jobListHeaders.sponsorship}</div>
+        <div className="header-status" aria-label="status">{jobListHeaders.status}</div>
+      </div>
       <JobCard jobs={props.jobs} editJob={props.editJob}/>
     </div>
   )

@@ -1,7 +1,6 @@
 /* header */
 
 .header-container {
-  margin-top: 150px;
   width: 70%;
   display: flex;
   flex-direction: row;

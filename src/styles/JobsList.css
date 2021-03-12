@@ -22,69 +22,37 @@
   font-weight: 700;
   line-height: 21px;
   letter-spacing: 0em;
-  text-align: left;
   color:  #949494;
-  padding: 10px 0 10px 0;
-  display: flex;
-  flex-direction: row;
+  padding: 10px 0 10px 20px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 40% 15% 19% 35%;
 }
 
 @media screen and (max-width: 768px) {
   .jobs-list-headers {
-    font-family: Noto Sans;
+    font-family: "Noto Sans";
     font-size: 14px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    padding-left: 0px;
+    display: grid;
+    grid-template-columns: 25% 20% 30% 20%;
   }
 }
 
 .header-title {
   min-width: 70px;
-  padding: 0 28% 0 2%;
-}
-
-.header-posted {
-  padding-right: 10%;
-}
-
-.header-sponsorship {
-  padding-right: 8%;
-}
-
-.header-status {
-  padding-right: 150px;
 }
 
 @media screen and (min-width: 1154px) { 
-  .header-posted {
-    padding-right: 13%;
+  .jobs-list-headers {
+    display: grid;
+    grid-template-columns: 41% 17% 17% 25%;
   }
-  
-  .header-sponsorship {
-    padding-right: 11%;
-  }
-  
-  .header-status {
-    padding-right: 150px;
-  }
+
 }
 
 @media screen and (max-width: 768px) {
   .header-title {
-    padding: 0 25px 0 15px;
-  }
-
-  .header-posted {
-    padding-right: 10px;
-  }
-
-  .header-sponsorship {
-    padding-right: 10px;
-  }
-
-  .header-status {
-    padding-right: 10px;
+    padding: 0 15px;
   }
 }

@@ -1,3 +1,19 @@
+/* skip to content  */
+
+.skip-content {
+  background: #faf9f8;
+  color: rgb(8, 8, 8);
+  font-weight: 700;
+  left: 50%;
+  padding: 4px;
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+.skip-content:focus {
+  transform: translateY(0%);
+}
+
  /* navigation */
 
  .nav-container {

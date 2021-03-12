@@ -7,11 +7,11 @@ const Header = (props) => {
 
   return (
     <div className="header-container">
-      <div className="header-jobs">
+      <div className="header-jobs" tabIndex="0" role="heading" aria-level="1">
         Jobs 
         <div className="listings-count">{props.jobs.length} listings</div>
       </div>
-      <AddJobButton setAdd={props.setAdd}/>
+      <AddJobButton tabIndex="0" setAdd={props.setAdd}/>
     </div>
   )
 }

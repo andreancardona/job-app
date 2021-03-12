@@ -5,16 +5,17 @@ import '../styles/navigation.css';
 const Navigation = ({ props }) => {
   
   return (
-    <div className="nav-container">
-      <div className="nav-title" tabIndex="0" >{props.title}</div>
+    <nav className="nav-container">
+      <div className="nav-title">{props.title}</div>
+      <a className="skip-content" href='#main'>Skip to main content</a>
       <div className="user-profile">
-        <img className="user-profile--image" alt="profile placeholder" tabIndex="0"  src={profilePlaceholder} />
+        <img className="user-profile--image" alt="profile placeholder" src={profilePlaceholder} />
         <div className="user-profile--info">
-          <div className="user-profile--name" tabIndex="0">{props.userName}</div>
-          <div className="user-profile--role" tabIndex="0">{props.userRole}</div>
+          <div className="user-profile--name">{props.userName}</div>
+          <div className="user-profile--role">{props.userRole}</div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

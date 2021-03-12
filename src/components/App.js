@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from './Navigation';
 import Header from './Header';
@@ -6,6 +6,7 @@ import JobsList from '../components/JobsList';
 import EditJob from './EditJob';
 import AddJob from '../components/AddJob.js';
 import '../styles/app.css';
+import '../styles/navigation.css';
 
 const App = () => {
   // Navigation props
@@ -83,15 +84,15 @@ const App = () => {
 	}
 
   return (
-    <div className="app-container">
+    <div role="contentinfo" className="app-container">
       <Navigation props={navProps}/>
       <Router>
           <Switch>
-            <Route path="/home" component={() => 
-              <Fragment>
+            <Route path="/" component={() => 
+              <main id="main" role="main">
                 <Header jobs={jobs} setAdd={setAdd}/>
                 <JobsList jobs={jobs} editJob={editJob}/>
-              </Fragment>
+              </main>
             } />
             <Route path="/job-form" component={() => 
               editing

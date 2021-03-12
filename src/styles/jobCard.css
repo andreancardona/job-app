@@ -1,25 +1,31 @@
 /* job card */
 
 .job-card {
-  align-items: center;
   background: #fff;
-  display: flex;
   font-size: 20px;
-  justify-content: space-between;
-  margin-bottom: 16px;
-
+  margin: 8px 0 8px 0;
   width: 100%;
   height: 80px;
   border: 1px solid #D4D2D0;
   box-sizing: border-box;
   border-radius: 8px;
+  display: grid;
+  grid-template-columns: 37% 63%;
+  text-align: left;
+  align-items: center;
+}
+
+.aria-label {
+  display: hidden;
 }
 
 /* job title location  */
 
 .job-title-location {
-  width: 30%;
-  padding: 18px 0px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .title {
@@ -45,29 +51,34 @@
 @media screen and (max-width: 768px) {
   .job-card {
     font-size: 16px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    text-align: left;
+    align-items: center;
   }
-
   .job-title-location {
-    width: 23%;
-    padding: 0 0 0 2%;
+    margin-left: 5px;
   }
 }
 
 /* job post details */
 
 .job-post-details {
-  width: 60%;
   margin-right: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  text-align: center;
   align-items: center;
+  display: grid;
+  grid-template-columns: 25% 32% 20% 25%;
 }
 
 @media screen and (max-width: 768px) {
   .job-post-details {
-    width: 75%;
-    margin-right: 5px;
+    margin-right: 0px;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 30% 25% 22% 25%;
   }
 }
 
@@ -112,6 +123,7 @@
   line-height: 18px;
   background: #ffff;
   padding: 13px, 16px, 13px, 16px;
+  margin-left: 40px;
   border-radius: 8px;
   width: 62px;
   height: 44px;
@@ -120,6 +132,8 @@
 
 @media screen and (max-width: 768px) {
   .edit-button {
-    margin: 0px;
+    width: 52px;
+    height: 34px;
+    margin-left: 0px;
   }
 }
