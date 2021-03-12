@@ -18,7 +18,7 @@ const AddJob = (props) => {
       props.addJob(job);
         setJob(initialState);
       
-      history.push("/")
+      history.push("/home")
   };
 
   const handleCancel = (event) => {
@@ -27,7 +27,7 @@ const AddJob = (props) => {
     props.setAdding(false)
     props.setEditing(false)
 
-    history.push("/")
+    history.push("/home")
   }
 
 	return (

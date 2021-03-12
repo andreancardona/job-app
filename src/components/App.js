@@ -88,7 +88,7 @@ const App = () => {
       <Navigation props={navProps}/>
       <Router>
           <Switch>
-            <Route path="/" component={() => 
+            <Route path="/home" component={() => 
               <main id="main" role="main">
                 <Header jobs={jobs} setAdd={setAdd}/>
                 <JobsList jobs={jobs} editJob={editJob}/>
