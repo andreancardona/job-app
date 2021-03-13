@@ -1,20 +1,18 @@
-/* button style varaibles */
+@import "./_colors.scss";
+@import "./fonts";
 
-$color-text: #ffff;
-$add-background-color: #085ff7;
-$edit-color-text: #085ff7;
-$edit-background-color: #ffff;
+/* buttons */
 
-// fonts
-$helvetica-font: "Helvetica Neue";
+/* add job and save button */
 
 .add-save-button {
-  color: $color-text;
+  font-family: $helvetica;
+  color: $font-white;
   font-style: normal;
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 16px;
   line-height: 18px;
-  background: $add-background-color;
+  background: $background-blue;
   padding: 13px, 16px, 13px, 16px;
   border-radius: 8px;
   width: 91px;
@@ -25,35 +23,43 @@ $helvetica-font: "Helvetica Neue";
 /* edit button */
 
 .edit-button {
-  color: $edit-color-text;
-  font-family: $helvetica-font;
+  color: $font-blue;
+  font-family: $helvetica;
   font-style: normal;
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 16px;
   line-height: 18px;
-  background: $edit-background-color;
+  background: $background-white;
   padding: 13px, 16px, 13px, 16px;
   margin-left: 40px;
   border-radius: 8px;
   width: 62px;
   height: 44px;
-  border: 1px solid #d4d2d0;
+  border: 1px solid $border-light;
 }
 
 /* cancel button */
 
 .cancel-button {
-  color: $edit-color-text;
-  font-family: $helvetica-font;
+  color: $font-blue;
+  font-family: $helvetica;
   font-style: normal;
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 16px;
   line-height: 18px;
-  background: $edit-background-color;
+  background: $background-white;
   padding: 13px 16px 13px 16px;
   border-radius: 8px;
   width: 91px;
   height: 44px;
-  border: 1px solid #d4d2d0;
+  border: 1px solid $border-light;
   margin-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .edit-button {
+    width: 52px;
+    height: 34px;
+    margin-left: 0px;
+  }
 }

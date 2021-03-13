@@ -1,4 +1,6 @@
-@import './buttons';
+@import "./_colors.scss";
+@import "./_buttons.scss";
+@import "./_fonts.scss";
 
 /* job form */
 
@@ -6,8 +8,8 @@
   margin-top: 140px;
   width: 70%;
   height: 75%;
-  background: #ffffff;
-  border: 1px solid #d4d2d0;
+  background: $background-white;
+  border: 1px solid $border-light;
   border-radius: 8px;
 }
 
@@ -22,7 +24,7 @@
 .form-headers {
   height: 80px;
   padding: 25px 0 0 30px;
-  border-bottom: 1px solid #d4d2d0;
+  border-bottom: 1px solid $border-light;
 }
 
 @media screen and (max-width: 768px) {
@@ -32,19 +34,19 @@
 }
 
 .form-heading {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-size: 20px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 30px;
   letter-spacing: 0em;
 }
 
 .form-sub-heading {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   line-height: 24px;
   letter-spacing: 0em;
 }
@@ -57,31 +59,32 @@
 }
 
 .label {
-  font-family: $helvetica-font;
+  font-family: $helvetica;
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  color: $font-dark;
 }
 
 .sub-label {
-  font-family: $helvetica-font;
+  font-family: $helvetica;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
-  color: #767676;
+  color: $font-light-gray;
 }
 
 input {
-  font-family: $helvetica-font;
+  font-family: $helvetica;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
@@ -89,10 +92,10 @@ input {
 }
 
 select {
-  font-family: $helvetica-font;
+  font-family: $helvetica;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
@@ -105,29 +108,10 @@ select {
   background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 768px) {
-  select {
-    font-family: $helvetica-font;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
-    padding: 10px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url("../images/caret.svg");
-    background-position: 260px center;
-    background-repeat: no-repeat;
-  }
-}
-
 .input {
   width: 274px;
   height: 40px;
-  border: 1px solid #949494;
+  border: 1px solid $border-light;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -135,15 +119,15 @@ select {
 .select-input {
   width: 288px;
   height: 44px;
-  border: 1px solid #949494;
+  border: 1px solid $border-light;
   border-radius: 8px;
   margin-bottom: 15px;
-  background-color: #ffff;
+  background-color: $background-white;
 }
 
 .job-form--footer {
   height: 70px;
-  border-top: 1px solid #d4d2d0;
+  border-top: 1px solid $border-light;
 }
 
 .footer-buttons {
@@ -152,13 +136,13 @@ select {
 }
 
 .update-button {
-  color: #ffff;
-  font-family: Helvetica Neue;
+  color: $font-white;
+  font-family: "Helvetica Neue";
   font-style: normal;
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 16px;
   line-height: 18px;
-  background: #085ff7;
+  background: $background-blue;
   padding: 13px 16px 13px 16px;
   border-radius: 8px;
   width: 91px;

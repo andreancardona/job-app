@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import JobForm from './JobForm';
-import '../styles/_buttons.scss';
-import '../styles/_job-form.scss';
 
 const AddJob = (props) => {
   const initialState = { id: '', title: '', location: '', sponsorship: 'Sponsor', status: 'Open' };

@@ -1,3 +1,6 @@
+@import "./_colors.scss";
+@import "./_fonts.scss";
+
 /* header */
 
 .header-container {
@@ -8,23 +11,23 @@
 }
 
 .header-jobs {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-style: normal;
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 28px;
   line-height: 35px;
-  color: #2d2d2d;
+  color: $font-dark;
   display: flex;
   flex-direction: row;
 }
 
 .listings-count {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-style: normal;
-  font-weight: 300;
+  font-weight: $regular;
   font-size: 14px;
   line-height: 21px;
-  color: #949494;
+  color: $font-light-gray;
   margin: 11px 0 0 10px;
 }
 

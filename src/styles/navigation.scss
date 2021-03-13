@@ -1,11 +1,12 @@
-@import './_buttons.scss';
+@import "./_colors.scss";
+@import "./_buttons.scss";
 
 /* skip to content  */
 
 .skip-content {
-  background: #faf9f8;
+  background: $background-white;
   color: rgb(8, 8, 8);
-  font-weight: 700;
+  font-weight: $bold;
   left: 50%;
   padding: 4px;
   position: absolute;
@@ -24,7 +25,7 @@
   width: 100%;
   left: 0px;
   top: 0px;
-  background: #2d2d2d;
+  background: $background-dark;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,13 +35,13 @@
 /* nav title */
 
 .nav-title {
-  font-family: $helvetica-font;
+  font-family: $helvetica;
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 24px;
-  color: #faf9f8;
+  color: $font-white;
   margin: 18px 0 0 15%;
 }
 
@@ -67,23 +68,23 @@
 }
 
 .user-profile--name {
-  font-family: $helvetica-font;
+  font-family: $helvetica;
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 24px;
-  color: #faf9f8;
+  color: $font-white;
 }
 
 .user-profile--role {
-  font-family: $helvetica-font;
+  font-family: $helvetica;
   font-size: 12px;
   font-style: normal;
   font-variant: normal;
-  font-weight: 400;
+  font-weight: $regular;
   line-height: 18px;
-  color: #faf9f8;
+  color: $font-white;
 }
 
 @media screen and (max-width: 768px) {

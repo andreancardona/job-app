@@ -1,12 +1,15 @@
+@import "./_colors.scss";
+@import "./_fonts.scss";
+
 /* job card */
 
 .job-card {
-  background: #fff;
+  background: $background-white;
   font-size: 20px;
   margin: 8px 0 8px 0;
   width: 100%;
   height: 80px;
-  border: 1px solid #D4D2D0;
+  border: 1px solid $border-light;
   box-sizing: border-box;
   border-radius: 8px;
   display: grid;
@@ -29,9 +32,9 @@
 }
 
 .title {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0em;
@@ -39,13 +42,13 @@
 }
 
 .location {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   line-height: 21px;
   letter-spacing: 0em;
-  color: #949494;
+  color: $font-light-gray;
 }
 
 @media screen and (max-width: 768px) {
@@ -83,40 +86,41 @@
 }
 
 .posted {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0em;
-  color:#2d2d2d;
+  color: $font-dark;
 }
 
 .sponsorship {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0em;
-  color:#2d2d2d;
+  color: $font-dark;
 }
 
 .status {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 14px;
   line-height: 21px;
   letter-spacing: 0em;
-  color:#2d2d2d;
+  color: $font-dark;
 }
 
+/* current date */
 
-@media screen and (max-width: 768px) {
-  .edit-button {
-    width: 52px;
-    height: 34px;
-    margin-left: 0px;
-  }
+.current-date {
+  font-family: $noto-sans;
+  font-style: normal;
+  font-weight: $regular;
+  font-size: 14px;
+  line-height: 21px;
 }

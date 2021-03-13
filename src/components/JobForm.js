@@ -1,5 +1,4 @@
 import React, { Fragment }from 'react';
-import '../styles/_job-form.scss';
 
 const JobForm = (props) => {
   const handleInputChange = (event) => {

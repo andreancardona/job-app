@@ -1,3 +1,6 @@
+@import "./_colors.scss";
+@import "./_fonts.scss";
+
 /* jobs list container */
 
 .jobs-list-container {
@@ -10,19 +13,19 @@
   .jobs-list-container {
     width: 95%;
     margin: 15% 0 10% 0;
-  };
+  }
 }
 
 /* jobs list headers */
 
 .jobs-list-headers {
-  font-family: "Noto Sans";
+  font-family: $noto-sans;
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 21px;
   letter-spacing: 0em;
-  color:  #949494;
+  color: $font-light-gray;
   padding: 10px 0 10px 20px;
   text-align: left;
   display: grid;
@@ -31,7 +34,7 @@
 
 @media screen and (max-width: 768px) {
   .jobs-list-headers {
-    font-family: "Noto Sans";
+    font-family: $noto-sans;
     font-size: 14px;
     padding-left: 0px;
     display: grid;
@@ -43,12 +46,11 @@
   min-width: 70px;
 }
 
-@media screen and (min-width: 1154px) { 
+@media screen and (min-width: 1154px) {
   .jobs-list-headers {
     display: grid;
     grid-template-columns: 41% 17% 17% 25%;
   }
-
 }
 
 @media screen and (max-width: 768px) {

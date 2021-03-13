@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import JobForm from './JobForm';
-import '../styles/_job-form.scss';
-import '../styles/_buttons.scss';
 
 const EditJob = (props) => {
   const [ job, setJob ] = useState(props.currentJob)

@@ -1,6 +1,5 @@
 import React from 'react';
 import JobCard from './JobCard';
-import '../styles/jobsList.css';
 
 // JobList component where pass down props: jobs & editJob
 // Here we will handle the list view for all the jobs

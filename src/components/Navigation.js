@@ -1,6 +1,5 @@
 import React from 'react';
 import profilePlaceholder from '../images/profilePlaceholder.svg';
-import '../styles/_navigation.scss';
 
 const Navigation = ({ props }) => {
   

@@ -1,7 +1,9 @@
+@import "./_colors.scss";
+
 /* app container */
 
 .app-container {
-  background: #efefef  ;
+  background: $background-light;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,4 +17,10 @@ main {
   align-items: center;
   width: 100%;
   height: 90vh;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 0px;
+  }
 }

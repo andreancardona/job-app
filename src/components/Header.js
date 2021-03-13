@@ -1,7 +1,5 @@
 import React from 'react';
 import AddJobButton from './AddJobButton';
-import '../styles/header.css';
-
 
 const Header = (props) => {
 
