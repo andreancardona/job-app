@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The <JobForm /> component JobForm renders with nav props 1`] = `
+Array [
+  <div
+    aria-label="Edit a jobEdit the information for your job listing."
+    aria-level="1"
+    className="form-headers"
+    role="heading"
+    tabIndex="0"
+  >
+    <div
+      className="form-heading"
+    >
+      Edit a job
+    </div>
+    <div
+      className="form-sub-heading"
+    >
+      Edit the information for your job listing.
+    </div>
+  </div>,
+  <form
+    className="job-form"
+  >
+    <label
+      className="label"
+      tabIndex="0"
+    >
+      Job title
+       *
+    </label>
+    <div
+      className="sub-label"
+      tabIndex="0"
+    >
+      What is the name of the role?
+    </div>
+    <input
+      className="input"
+      name="title"
+      onChange={[Function]}
+      tabIndex="0"
+      type="text"
+    />
+    <label
+      className="label"
+      tabIndex="0"
+    >
+      Location
+       *
+    </label>
+    <div
+      className="sub-label"
+      tabIndex="0"
+    >
+      Where is this job?
+    </div>
+    <input
+      className="input"
+      name="location"
+      onChange={[Function]}
+      tabIndex="0"
+      type="text"
+    />
+    <label
+      className="label"
+      tabIndex="0"
+    >
+      Sponsorship
+       *
+    </label>
+    <div
+      className="sub-label"
+      tabIndex="0"
+    >
+      Do you want to promote this job?
+    </div>
+    <select
+      className="select-input"
+      name="sponsorship"
+      onChange={[Function]}
+    >
+      <option
+        value="Sponsor"
+      >
+        Sponsor
+      </option>
+      <option
+        value="Free"
+      >
+        Free
+      </option>
+    </select>
+    <label
+      className="label"
+      tabIndex="0"
+    >
+      Status
+       *
+    </label>
+    <div
+      className="sub-label"
+      tabIndex="0"
+    >
+      Are you ready to make this job  pooosting  public?
+    </div>
+    <select
+      className="select-input"
+      name="status"
+      onChange={[Function]}
+      tabIndex="0"
+    >
+      <option
+        value="Open"
+      >
+        Open
+      </option>
+      <option
+        value="Paused"
+      >
+        Paused
+      </option>
+      <option
+        value="Closed"
+      >
+        Closed
+      </option>
+    </select>
+  </form>,
+]
+`;

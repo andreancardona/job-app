@@ -28,8 +28,6 @@ const EditJob = (props) => {
     <div className="job-form-container">
       <JobForm 
         adding={props.adding} 
-        labels={props.labels} 
-        subLabels={props.subLabels} 
         job={job} 
         setJob={setJob}
       />
