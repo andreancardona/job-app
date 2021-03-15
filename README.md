@@ -39,5 +39,10 @@ There are a few key concepts I'd like to elaborate on
 6. A little reflection (an optional read..)
 
 ### File structure
-File structures can always get messy quickly which is why I've tried to keep mine as simplee as possible!
+File structures can always get messy quickly, which is why I've tried to keep mine as simple as possible! I've diveded my project into 4 main groups: 
+  1. Components 
+  2. Images / SVGs
+  3. Styles
+  4. Tests
 
+I know there are many ways to group and structure files, but this is the way that has worked best for me. Having this structure allows each folder to house a single intention and functionality within the app (e.g. `styles` - holds all styling for the entirety of the app vs. mixing and matching component / test and style files). 
