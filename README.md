@@ -12,7 +12,7 @@ To clone the app
 
 ## `cd job-app`
 
-CD into the project my-app
+CD into the project job-app
 
 In the project directory, you can run:
 
