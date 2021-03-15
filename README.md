@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Welcome to my `Job App` project!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Job App is a simple CRU (CRUD app...without the delete) that allows a user to add a job posting and edit an existing job.
 
-## Available Scripts
+## Get started - TLDR!
 
 In the project directory, you can run:
 
-### `yarn start`
+## `yarn start` - Navigate to [http://localhost:3000/home](http://localhost:3000/home)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Navigate to the home screen of the app [http://localhost:3000/home](http://localhost:3000/home)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## `yarn test`
 
-### `yarn test`
+This project uses [Jest Axe](https://www.npmjs.com/package/jest-axe) to catch any potential acceessibility violations and [Jest Snapshots](https://jestjs.io/docs/snapshot-testing) for our UI component testing.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## `sass --watch src/index.scss build/index.css`  
 
-### `yarn build`
+Run the above command to compile your sass styling changes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies used
+  - [Create React App](https://github.com/facebook/create-react-app)
+  - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+  - [Mac Voice Over](https://medium.com/@lsnrae/how-to-use-the-voiceover-screen-reader-70699e2e0f8a#:~:text=Basic%20VoiceOver%20Commands%20(Safari),rotor%20%E2%80%94%20Ctrl%2BOpt%2BU)
+  - [Jest Axe](https://www.npmjs.com/package/jest-axe)
+  - [Jest Snapshots](https://jestjs.io/docs/snapshot-testing)
+  - [Node SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)
+  - [Yarn Package Manager](https://yarnpkg.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### It should look like something below: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="1146" alt="Screen Shot 2021-03-14 at 11 53 43 PM" src="https://user-images.githubusercontent.com/32720851/111171788-dadee380-856a-11eb-9b73-20387f932aa2.png">
 
-### `yarn eject`
+https://user-images.githubusercontent.com/32720851/111167742-0790fc00-8567-11eb-97b8-274d44709294.mp4
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-----------------------------------------------------------------------------
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Let's get started (the longer version)
 
-## Learn More
+There are a few key concepts I'd like to elaborate on:
+1. [File structure](https://github.com/andreancardona/job-app/blob/main/README.md#file-structure)
+2. [Code style && React Hooks](https://github.com/andreancardona/job-app/blob/main/README.md#code--react-hooks)
+3. [Accessibility](https://github.com/andreancardona/job-app/blob/main/README.md#accessibility)
+4. [Testing](https://github.com/andreancardona/job-app/blob/main/README.md#testing)
+5. [Styles](https://github.com/andreancardona/job-app/blob/main/README.md#styles)
+6. [A little reflection (an optional read..)](https://github.com/andreancardona/job-app/blob/main/README.md#a-little-reflection)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ### File structure
+  File structures can always get messy quickly, which is why I've tried to keep mine as simple as possible! 
+  I've divided my project into 4 main groups: 
+  
+    1. Components 
+    2. Images & SVGs
+    3. Styles
+    4. Tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  I know there are many ways to group and structure files, but this is the way that has worked best for me. Having this structure allows each folder to house a single intention and functionality within the app (e.g. `styles` - holds all styling for the entirety of the app vs. mixing and matching component / test and style files).
+  
+   ### Code && React Hooks
+   
+   When thinking about how to write my code I wanted to keep it DRY, readable, effective and again as simple possible. And so, I decided to use [React Hooks](https://reactjs.org/docs/hooks-intro.html). The biggest reason I love using React Hooks is because both presentational & functional components can hold state...which is pretty awesome. And remember this and binding, and how confusing all that was, it get's rid of all that too :). Here is a great medium article that breaks down using state with Reacht Hooks - [React Hooks Understanding the Basics](https://medium.com/makemytrip-engineering/react-hooks-understanding-the-basics-d7f8290f445e)
+   
+    To see this all in action:
+      - run: `yarn start`
+      - navigatate to `http://localhost:3000/home`
+   
+   ### Accessbility
+   
+   Making this project Accessible was extremely important. I decide to use a few tools that would help me get there:
+   1. [Jest Axe](https://www.npmjs.com/package/jest-axe). This is the jest testing package that will run test on your components to check for any acceesesibility violations. As noted on the npm site - it does not mean   your app is accessible, it's just a tool to help get you there. 
+   
+    To see this in action
+      - run: `yarn test`
+     
+   2. Voice Over Screen Reader (imbedded in all Macs) - [to get started read this awesome medium article](https://medium.com/@lsnrae/how-to-use-the-voiceover-screen-reader-70699e2e0f8a#:~:text=Basic%20VoiceOver%20Commands%20(Safari),rotor%20%E2%80%94%20Ctrl%2BOpt%2BU)
+   3. IBM Accessibility Checker - [Chrome extension](https://chrome.google.com/webstore/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp)
+      - Learn more about the [IBM Accessibility Checker](https://www.ibm.com/able/toolkit/tools/)
+      - This is an awesome tool to catch any obvious a11y issues
+  
+  Please note - I am not an accessibility expert, just a developer trying to make more inclusive apps, and I'm still learning, so all feedback to make this app more accessible is welcome!
+  
+  ### Testing 
+  For this project I chose to use [Jest Axe](https://www.npmjs.com/package/jest-axe) to catch any potential acceessibility violations (as mentioned above) and [Jest Snapshots](https://jestjs.io/docs/snapshot-testing) for our UI component testing. The main thing I was checking for in testing was that props were being passeed down properly, that the data structures were correct, and that the components were being rendered as expected. This is great resource to learn about [The pros and cons of Jest snapshot testing](https://tsh.io/blog/pros-and-cons-of-jest-snapshot-tests/#:~:text=Jest%20with%20snapshots%20gives%20you,if%20the%20values%20are%20correct.) 
+     
+    To see this in action
+      - run: `yarn test`
+  
+  ### Styles
+  For this project, if you take a look at my commit history, I started using pure css, and then...I switched it up! My over all approach to this project, was keep it simple *and then* enhance. I love using scss, mainly because it does a lot of the guess work for you! SCSS allows you to define style variables at the top level, making them accessbile throughout every part of your project. An amazing resource to understand how you might want to think about approaching styles is this article [Style React Components: 7 Ways Compared](https://www.sitepoint.com/react-components-styling-options/#usingscsswithreact)
+     
+    To see this in action 
+      - run: `sass --watch src/index.scss build/index.css`
+      - make some changes: navigate to `_colors/scss` file and change `$background-blue: #085ff7;` to `$background-blue: #fa4525;` 
+      and you should see all the once blue button background change to red - pretty cool, right? :)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ ### A little reflection
+ With personal projects I've realized it's hard to not want to keep *working* to improve it. If you look at my commit history I changed many major parts of the project multiple times - from switching css to scss, creating and adding components to changing the file structure of my app. What's cool about coding is, there are so many different ways to achieve the same intention - and that's pretty awesome. I think looking forward, I would have taken more time to understand how I wanted to structure my components. I think that would've helped me define a clearer vision of how I wanted to develop this project. But, we live and learn. And so looking forward this is something I want to remember, and keep in mind. Whether it's through sudo code, hand drawings or just notes - taking the time to outline the flow of componoents and their functionalities is extrelemely important (p.s. I did thesee things I just wished I had taken more time on it before jumping straight into coding).
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Well as some final thougths, this project was really fun to work on. All comments, and feedback is welcome. I'm learning everyday and trying to become a better developer in the process. :) 
+  
+  
