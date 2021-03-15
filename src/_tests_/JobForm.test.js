@@ -20,5 +20,4 @@ describe('The <JobForm /> component', () => {
     const { container } = render(<JobForm />);
     expect(await axe(container)).toHaveNoViolations();
   });
-
 });
