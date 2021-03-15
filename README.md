@@ -21,8 +21,9 @@ This project uses [Jest Axe](https://www.npmjs.com/package/jest-axe) to catch an
 
 Run the above command to compile your sass styling changes
 
-### Demo: 
+### It should look like something below: 
 
+<img width="1146" alt="Screen Shot 2021-03-14 at 11 53 43 PM" src="https://user-images.githubusercontent.com/32720851/111171788-dadee380-856a-11eb-9b73-20387f932aa2.png">
 
 https://user-images.githubusercontent.com/32720851/111167742-0790fc00-8567-11eb-97b8-274d44709294.mp4
 
@@ -33,12 +34,12 @@ https://user-images.githubusercontent.com/32720851/111167742-0790fc00-8567-11eb-
 ## Let's get started (the longer version)
 
 There are a few key concepts I'd like to elaborate on:
-1. File structure
-2. Code style && React Hooks
-3. Accessibility 
-4. Testing
-5. SCSS Styles
-6. A little reflection (an optional read..)
+1. [File structure](https://github.com/andreancardona/job-app/blob/main/README.md#file-structure)
+2. [Code style && React Hooks](https://github.com/andreancardona/job-app/blob/main/README.md#code--react-hooks)
+3. [Accessibility](https://github.com/andreancardona/job-app/blob/main/README.md#accessibility)
+4. [Testing](https://github.com/andreancardona/job-app/blob/main/README.md#testing)
+5. [SCSS Styles](https://github.com/andreancardona/job-app/blob/main/README.md#scss-styles)
+6. [A little reflection (an optional read..)]
 
   ### File structure
   File structures can always get messy quickly, which is why I've tried to keep mine as simple as possible! 
@@ -73,6 +74,19 @@ There are a few key concepts I'd like to elaborate on:
       - This is an awesome tool to catch any obvious a11y issues
   
   Please note - I am not an accessibility expert, just a developer trying to make more inclusive apps, and I'm still learning, so all feedback to make this app more accessible is welcome!
+  
+  ### Testing 
+  For this project I chose to use [Jest Axe](https://www.npmjs.com/package/jest-axe) to catch any potential acceessibility violations (as mentioned above) and [Jest Snapshots](https://jestjs.io/docs/snapshot-testing) for our UI component testing. The main thing I was checking for in testing was that props were being passeed down properly, that the data structures were correct, and that the components were being rendered as expected. This is great resource to learn about [The pros and cons of Jest snapshot testing](https://tsh.io/blog/pros-and-cons-of-jest-snapshot-tests/#:~:text=Jest%20with%20snapshots%20gives%20you,if%20the%20values%20are%20correct.) 
+     
+    To see this in action
+      - run: `yarn test`
+  
+  ### Styles
+  For this project, if you take a look at my commit history, I started using pure css, and then...I switched it up! My over all approach to this project, was keep it simple *and then* enhance. I love using scss, mainly because it does a lot of the guess work for you! SCSS allows you to define style variables at the top level, making them accessbile throughout every part of your project. An amazing resource to understand how you might want to think about approaching styles is this article [Style React Components: 7 Ways Compared](https://www.sitepoint.com/react-components-styling-options/#usingscsswithreact)
+     
+    To see this in action 
+      - run: `sass --watch src/index.scss build/index.css`
+      - make some changes: navigate to `_colors/scss` file and change `$background-blue: #085ff7;` to `$background-blue: #fa4525;` and you should see all the once blue button background change to red - pretty cool, right? :)
 
    
   
