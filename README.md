@@ -47,7 +47,7 @@ There are a few key concepts I'd like to elaborate on:
 2. [Code style && React Hooks](https://github.com/andreancardona/job-app/blob/main/README.md#code--react-hooks)
 3. [Accessibility](https://github.com/andreancardona/job-app/blob/main/README.md#accessibility)
 4. [Testing](https://github.com/andreancardona/job-app/blob/main/README.md#testing)
-5. [SCSS Styles](https://github.com/andreancardona/job-app/blob/main/README.md#scss-styles)
+5. [Styles](https://github.com/andreancardona/job-app/blob/main/README.md#styles)
 6. [A little reflection (an optional read..)](https://github.com/andreancardona/job-app/blob/main/README.md#a-little-reflection)
 
   ### File structure
