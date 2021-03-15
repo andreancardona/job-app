@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 
 const JobForm = (props) => {
   const initialJobForm = { id: '', title: '', location: '', sponsorship: 'Sponsor', status: 'Open' };
+
+  // Set initial state based on user action - Edit current job or Add new job
   const [ job, setJob ] = useState(props.editing ? props.currentJob : initialJobForm);
 
   let history = useHistory();
@@ -62,9 +64,9 @@ const JobForm = (props) => {
 
 
   // Update header and subHeader based current form
-  const header = props.currentJob ? 'Edit a job' : 'Add new job';
+  const header = props.adding ? 'Add new job' : 'Edit a job';
 
-  const subHeader = props.currentJob ? 'Edit the information for your job listing.' : 'Fill out the information for your new job listing.';
+  const subHeader = props.adding ? 'Fill out the information for your new job listing.' : 'Edit the information for your job listing.';
 
   return (
     <div className="job-form-container">
