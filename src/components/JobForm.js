@@ -48,6 +48,7 @@ const JobForm = (props) => {
 
       props.addJob(job);
       props.setJob(initialJobForm);
+      props.setAdding(false)
       
       history.push("/home")
   };
