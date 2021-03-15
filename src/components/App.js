@@ -3,15 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation from './Navigation';
 import Header from './Header';
 import JobsList from '../components/JobsList';
-import EditJob from './EditJob';
-import AddJob from '../components/AddJob.js';
+import JobForm from './JobForm';
 
 const App = () => {
 
   // Navigation props
   const navProps = {
     title: 'JobHob',
-    userName: 'Andrea Batlle',
+    userName: 'Andrea Cardona',
     userRole: 'Admin'
   }
 
@@ -27,10 +26,23 @@ const App = () => {
 
   // Set our state / read our list of jobs
   const [ jobs, setJobs ] = useState(jobsList)
+  const [ job, setJob ] = useState(initialJobForm);
 	const [ currentJob, setCurrentJob ] = useState(initialJobForm)
 	const [ editing, setEditing ] = useState(false)
   const [ adding, setAdding ] = useState(false)
 
+  // Update set add job state
+  const setAdd = () => {
+    setAdding(true);
+  }
+
+  // Add a job
+  const addJob = (job) => {
+		job.id = jobs.length + 1
+    const newJobs = [...jobs, job]
+
+		setJobs(newJobs);
+	}
 
   // Allow user to edit job
   const editJob = (job) => {
@@ -44,19 +56,6 @@ const App = () => {
       status: job.status 
     })
   }
-
-  // Take user to add job form
-  const setAdd = () => {
-    setAdding(true);
-  }
-
-  // Add a job
-  const addJob = (job) => {
-		job.id = jobs.length + 1
-    const newJobs = [...jobs, job]
-
-		setJobs(newJobs);
-	}
 
   // Update a job
   const updateJob = (id, jobBeingUpdated) => {
@@ -79,28 +78,30 @@ const App = () => {
             } />
             <Route path="/job-form" component={() => 
               editing
-              ? <EditJob
+              ? <JobForm
+                  jobs={jobs} 
                   setAdding={setAdding} 
                   editing={editing}
+                  editJob={editJob}
+                  setJob={setJob}
                   setEditing={setEditing}
                   currentJob={currentJob}
                   updateJob={updateJob}
+                  addJob={addJob} 
+                  job={job}
                 /> 
-              : adding ? 
-                <AddJob 
+              : 
+                <JobForm
                   adding={adding}
                   setAdding={setAdding} 
                   jobs={jobs} 
+                  setJob={setJob}
                   addJob={addJob} 
+                  editJob={editJob}
                   setEditing={setEditing}
-                />
-              : <AddJob 
-                  adding={adding}
-                  setAdding={setAdding} 
-                  addJob={addJob} 
-                  setEditing={setEditing}
-                /> 
-            } /> 
+                  job={job}
+                />}
+             /> 
           </Switch>
       </Router>
     </div>
