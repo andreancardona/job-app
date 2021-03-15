@@ -4,7 +4,21 @@ Job App is a simple CRU (CRUD app...without the delete) that allows a user to ad
 
 ## Get started - TLDR!
 
+In your terminal run: 
+
+## `git clone https://github.com/andreancardona/job-app` 
+
+To clone the app
+
+## `cd job-app`
+
+CD into the project my-app
+
 In the project directory, you can run:
+
+## `yarn install`
+
+To download all the packages
 
 ## `yarn start` - Navigate to [http://localhost:3000/home](http://localhost:3000/home)
 
@@ -27,7 +41,7 @@ Run the above command to compile your sass styling changes
   - [Node SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)
   - [Yarn Package Manager](https://yarnpkg.com/)
 
-### It should look like something below: 
+### It should look like this: 
 
 <img width="1146" alt="Screen Shot 2021-03-14 at 11 53 43 PM" src="https://user-images.githubusercontent.com/32720851/111171788-dadee380-856a-11eb-9b73-20387f932aa2.png">
 
@@ -37,7 +51,7 @@ https://user-images.githubusercontent.com/32720851/111167742-0790fc00-8567-11eb-
 
 -----------------------------------------------------------------------------
 
-## Let's get started (the longer version)
+## Let's get started - the longer version...
 
 There are a few key concepts I'd like to elaborate on:
 1. [File structure](https://github.com/andreancardona/job-app/blob/main/README.md#file-structure)
@@ -48,7 +62,7 @@ There are a few key concepts I'd like to elaborate on:
 6. [A little reflection (an optional read..)](https://github.com/andreancardona/job-app/blob/main/README.md#a-little-reflection)
 
   ### File structure
-  File structures can always get messy quickly, which is why I've tried to keep mine as simple as possible! 
+  File structures can get messy quickly, which is why I've tried to keep mine as simple as possible! 
   I've divided my project into 4 main groups: 
   
     1. Components 
@@ -69,7 +83,7 @@ There are a few key concepts I'd like to elaborate on:
    ### Accessbility
    
    Making this project Accessible was extremely important. I decide to use a few tools that would help me get there:
-   1. [Jest Axe](https://www.npmjs.com/package/jest-axe). This is the jest testing package that will run test on your components to check for any acceesesibility violations. As noted on the npm site - it does not mean   your app is accessible, it's just a tool to help get you there. 
+   1. [Jest Axe](https://www.npmjs.com/package/jest-axe). This is the jest testing package that will run test on your components to check for any accessibility violations. As noted on the npm site - it does not mean your app is accessible, it's just a tool to help get you there. 
    
     To see this in action
       - run: `yarn test`
