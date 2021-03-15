@@ -79,19 +79,19 @@ const JobForm = (props) => {
       <form className="job-form">
         <label className="label" tabIndex="0">{labels.title} *</label>
         <div className="sub-label" tabIndex="0">{subLabels.title}</div>
-          <input className="input" tabIndex="0" type="text" name="title" value={props.currentJob ? job.title : null}  onChange={handleInputChange} />
+          <input className="input" tabIndex="0" type="text" name="title" value={job.title}  onChange={handleInputChange} />
         <label className="label" tabIndex="0">{labels.location} *</label>
         <div className="sub-label" tabIndex="0">{subLabels.location}</div>
-          <input className="input" type="text" name="location" value={props.currentJob ? job.location : null} tabIndex="0"onChange={handleInputChange} />
+          <input className="input" type="text" name="location" value={job.location} tabIndex="0"onChange={handleInputChange} />
         <label className="label" tabIndex="0">{labels.sponsorship} *</label>
         <div className="sub-label" tabIndex="0">{subLabels.sponsorship}</div>    
-          <select className="select-input" name="sponsorship" value={props.currentJob ? job.sponsorship : null } onChange={handleInputChange}>
+          <select className="select-input" aria-label="sponsorship options" name="sponsorship" value={job.sponsorship} onChange={handleInputChange}>
             <option value="Sponsor">Sponsor</option>
             <option value="Free">Free</option>
           </select>
         <label className="label" tabIndex="0">{labels.status} *</label>
         <div className="sub-label" tabIndex="0">{subLabels.status}</div> 
-          <select className="select-input" onChange={handleInputChange} name="status" value={props.currentJob ? job.status : null} tabIndex="0">
+          <select className="select-input" aria-label="sponsorship options" onChange={handleInputChange} name="status" value={job.status} tabIndex="0">
             <option value="Open">Open</option>
             <option value="Paused">Paused</option>
             <option value="Closed">Closed</option>

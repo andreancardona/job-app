@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The <JobForm /> component JobForm renders with nav props 1`] = `
-Array [
+exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
+<div
+  className="job-form-container"
+>
   <div
-    aria-label="Edit a jobEdit the information for your job listing."
+    aria-label="Add new jobFill out the information for your new job listing."
     aria-level="1"
     className="form-headers"
     role="heading"
@@ -12,14 +14,14 @@ Array [
     <div
       className="form-heading"
     >
-      Edit a job
+      Add new job
     </div>
     <div
       className="form-sub-heading"
     >
-      Edit the information for your job listing.
+      Fill out the information for your new job listing.
     </div>
-  </div>,
+  </div>
   <form
     className="job-form"
   >
@@ -42,6 +44,7 @@ Array [
       onChange={[Function]}
       tabIndex="0"
       type="text"
+      value=""
     />
     <label
       className="label"
@@ -62,6 +65,7 @@ Array [
       onChange={[Function]}
       tabIndex="0"
       type="text"
+      value=""
     />
     <label
       className="label"
@@ -77,9 +81,11 @@ Array [
       Do you want to promote this job?
     </div>
     <select
+      aria-label="sponsorship options"
       className="select-input"
       name="sponsorship"
       onChange={[Function]}
+      value=""
     >
       <option
         value="Sponsor"
@@ -103,13 +109,15 @@ Array [
       className="sub-label"
       tabIndex="0"
     >
-      Are you ready to make this job  pooosting  public?
+      Are you ready to make this job posting public?
     </div>
     <select
+      aria-label="sponsorship options"
       className="select-input"
       name="status"
       onChange={[Function]}
       tabIndex="0"
+      value=""
     >
       <option
         value="Open"
@@ -127,6 +135,26 @@ Array [
         Closed
       </option>
     </select>
-  </form>,
-]
+  </form>
+  <div
+    className="job-form--footer"
+  >
+    <div
+      className="footer-buttons"
+    >
+      <button
+        className="cancel-button"
+        onClick={[Function]}
+      >
+        Cancel
+      </button>
+      <button
+        className="add-save-button"
+        onClick={[Function]}
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
 `;

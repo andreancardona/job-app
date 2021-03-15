@@ -79,27 +79,31 @@ const App = () => {
             <Route path="/job-form" component={() => 
               editing
               ? <JobForm
+                  job={job}
                   jobs={jobs} 
-                  setAdding={setAdding} 
                   editing={editing}
-                  editJob={editJob}
+                  adding={adding}
                   setJob={setJob}
-                  setEditing={setEditing}
+                  addJob={addJob} 
+                  editJob={editJob}
                   currentJob={currentJob}
                   updateJob={updateJob}
-                  addJob={addJob} 
-                  job={job}
+                  setAdding={setAdding} 
+                  setEditing={setEditing}
                 /> 
               : 
                 <JobForm
-                  adding={adding}
-                  setAdding={setAdding} 
+                  job={job}
                   jobs={jobs} 
+                  editing={editing}
+                  adding={adding}
                   setJob={setJob}
                   addJob={addJob} 
                   editJob={editJob}
+                  currentJob={currentJob}
+                  updateJob={updateJob}
+                  setAdding={setAdding} 
                   setEditing={setEditing}
-                  job={job}
                 />}
              /> 
           </Switch>
