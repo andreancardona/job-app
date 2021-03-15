@@ -6,12 +6,9 @@ Job App is a simple CRU (CRUD app...without the delete) that allows a user to ad
 
 In the project directory, you can run:
 
-## `yarn start`
+## `yarn start` - Navigate to [http://localhost:3000/home](http://localhost:3000/home)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
- *Navigate to the home screen of the app [http://localhost:3000/home](http://localhost:3000/home)
+Navigate to the home screen of the app [http://localhost:3000/home](http://localhost:3000/home)
 
 ## `yarn test`
 
