@@ -1,71 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The <App /> component Header renders with header props 1`] = `
-<div
-  className="header-container"
->
-  <div
-    aria-level="1"
-    className="header-jobs"
-    role="heading"
-    tabIndex="0"
-  >
-    Jobs
-    <div
-      className="listings-count"
-    >
-      3
-       listings
-    </div>
-  </div>
-  <button
-    className="add-save-button"
-    onClick={[Function]}
-  >
-    Add job
-  </button>
-</div>
-`;
-
-exports[`The <App /> component JobsList renders with JobsList props 1`] = `
-<div
-  aria-hidden="true"
-  className="jobs-list-container"
-  id="job-list"
-  role="grid"
->
-  <div
-    aria-label="jobs listings"
-    className="jobs-list-headers"
-    id="job-list-headers"
-    role="row"
-    tabIndex="0"
-  >
-    <div
-      aria-label="title"
-      className="header-title"
-    >
-      Job Title
-    </div>
-    <div
-      aria-label="posted"
-      className="header-posted"
-    >
-      Posted
-    </div>
-    <div
-      aria-label="sponsorhsip"
-      className="header-sponsorship"
-    >
-      Sponsorship
-    </div>
-    <div
-      aria-label="status"
-      className="header-status"
-    >
-      Status
-    </div>
-  </div>
+exports[`The <JobCard /> component JobCard renders with JobCard props 1`] = `
+Array [
   <div
     className="job-card"
     tabIndex="0"
@@ -116,7 +52,7 @@ exports[`The <App /> component JobsList renders with JobsList props 1`] = `
         Edit
       </button>
     </div>
-  </div>
+  </div>,
   <div
     className="job-card"
     tabIndex="0"
@@ -167,7 +103,7 @@ exports[`The <App /> component JobsList renders with JobsList props 1`] = `
         Edit
       </button>
     </div>
-  </div>
+  </div>,
   <div
     className="job-card"
     tabIndex="0"
@@ -218,48 +154,6 @@ exports[`The <App /> component JobsList renders with JobsList props 1`] = `
         Edit
       </button>
     </div>
-  </div>
-</div>
-`;
-
-exports[`The <App /> component Navigation renders with nav props 1`] = `
-<nav
-  className="nav-container"
-  id="nav"
->
-  <div
-    className="nav-title"
-  >
-    JobHob
-  </div>
-  <a
-    className="skip-content"
-    href="#main"
-  >
-    Skip to main content
-  </a>
-  <div
-    className="user-profile"
-  >
-    <img
-      alt="profile placeholder"
-      className="user-profile--image"
-      src="profilePlaceholder.svg"
-    />
-    <div
-      className="user-profile--info"
-    >
-      <div
-        className="user-profile--name"
-      >
-        Andrea Batlle
-      </div>
-      <div
-        className="user-profile--role"
-      >
-        Admin
-      </div>
-    </div>
-  </div>
-</nav>
+  </div>,
+]
 `;

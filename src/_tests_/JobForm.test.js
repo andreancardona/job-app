@@ -16,8 +16,8 @@ describe('The <JobForm /> component', () => {
   });
 
 
-  test('Job should not fail any accessibility tests', async () => {
+  test('Job Form should not fail any accessibility tests', async () => {
     const { container } = render(<JobForm />);
     expect(await axe(container)).toHaveNoViolations();
-  });
+  })
 });
