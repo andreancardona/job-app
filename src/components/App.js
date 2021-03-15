@@ -91,8 +91,7 @@ const App = () => {
                   setAdding={setAdding} 
                   setEditing={setEditing}
                 /> 
-              : 
-                <JobForm
+              : <JobForm
                   job={job}
                   jobs={jobs} 
                   editing={editing}
@@ -104,7 +103,8 @@ const App = () => {
                   updateJob={updateJob}
                   setAdding={setAdding} 
                   setEditing={setEditing}
-                />}
+               />
+              }
              /> 
           </Switch>
       </Router>
