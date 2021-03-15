@@ -33,12 +33,14 @@ exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
        *
     </label>
     <div
+      aria-label="What is the name of the role?"
       className="sub-label"
       tabIndex="0"
     >
       What is the name of the role?
     </div>
     <input
+      aria-label="title"
       className="input"
       name="title"
       onChange={[Function]}
@@ -54,12 +56,14 @@ exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
        *
     </label>
     <div
+      aria-label="Where is this job?"
       className="sub-label"
       tabIndex="0"
     >
       Where is this job?
     </div>
     <input
+      aria-label="title"
       className="input"
       name="location"
       onChange={[Function]}
@@ -68,6 +72,7 @@ exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
       value=""
     />
     <label
+      aria-label="Do you want to promote this job?"
       className="label"
       tabIndex="0"
     >
@@ -75,6 +80,7 @@ exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
        *
     </label>
     <div
+      aria-label="Do you want to promote this job?"
       className="sub-label"
       tabIndex="0"
     >
@@ -85,7 +91,7 @@ exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
       className="select-input"
       name="sponsorship"
       onChange={[Function]}
-      value=""
+      value="Sponsor"
     >
       <option
         value="Sponsor"
@@ -99,6 +105,7 @@ exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
       </option>
     </select>
     <label
+      aria-label="Are you ready to make this job posting public?"
       className="label"
       tabIndex="0"
     >
@@ -106,6 +113,7 @@ exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
        *
     </label>
     <div
+      aria-label="Are you ready to make this job posting public?"
       className="sub-label"
       tabIndex="0"
     >
@@ -117,7 +125,7 @@ exports[`The <JobForm /> component JobForm renders with JobForm props 1`] = `
       name="status"
       onChange={[Function]}
       tabIndex="0"
-      value=""
+      value="Open"
     >
       <option
         value="Open"
