@@ -21,6 +21,15 @@ This project uses [Jest Axe](https://www.npmjs.com/package/jest-axe) to catch an
 
 Run the above command to compile your sass styling changes
 
+## Technologies used
+  - [Create React App](https://github.com/facebook/create-react-app)
+  - [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+  - [Mac Voice Over](https://medium.com/@lsnrae/how-to-use-the-voiceover-screen-reader-70699e2e0f8a#:~:text=Basic%20VoiceOver%20Commands%20(Safari),rotor%20%E2%80%94%20Ctrl%2BOpt%2BU)
+  - [Jest Axe](https://www.npmjs.com/package/jest-axe)
+  - [Jest Snapshots](https://jestjs.io/docs/snapshot-testing)
+  - [Node SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)
+  - [Yarn Package Manager](https://yarnpkg.com/)
+
 ### It should look like something below: 
 
 <img width="1146" alt="Screen Shot 2021-03-14 at 11 53 43 PM" src="https://user-images.githubusercontent.com/32720851/111171788-dadee380-856a-11eb-9b73-20387f932aa2.png">
@@ -57,7 +66,7 @@ There are a few key concepts I'd like to elaborate on:
    When thinking about how to write my code I wanted to keep it DRY, readable, effective and again as simple possible. And so, I decided to use [React Hooks](https://reactjs.org/docs/hooks-intro.html). The biggest reason I love using React Hooks is because both presentational & functional components can hold state...which is pretty awesome. And remember this and binding, and how confusing all that was, it get's rid of all that too :). Here is a great medium article that breaks down using state with Reacht Hooks - [React Hooks Understanding the Basics](https://medium.com/makemytrip-engineering/react-hooks-understanding-the-basics-d7f8290f445e)
    
     To see this all in action:
-      - run: yarn start
+      - run: `yarn start`
       - navigatate to `http://localhost:3000/home`
    
    ### Accessbility
@@ -86,8 +95,13 @@ There are a few key concepts I'd like to elaborate on:
      
     To see this in action 
       - run: `sass --watch src/index.scss build/index.css`
-      - make some changes: navigate to `_colors/scss` file and change `$background-blue: #085ff7;` to `$background-blue: #fa4525;` and you should see all the once blue button background change to red - pretty cool, right? :)
+      - make some changes: navigate to `_colors/scss` file and change `$background-blue: #085ff7;` to `$background-blue: #fa4525;` 
+      and you should see all the once blue button background change to red - pretty cool, right? :)
 
-   
+
+ ### A little reflection
+ With personal projects I've realized it's hard to not want to keep *working* to improve it. If you look at my commit history I changed many major parts of the project multiple times - from switching css to scss, creating and adding components to changing the file structure of my app. What's cool about coding is, there are so many different ways to achieve the same intention - and that's pretty awesome. I think looking forward, I would have taken more time to understand how I wanted to structure my components. I think that would've helped me define a clearer vision of how I wanted to develop this project. But, we live and learn. And so looking forward this is something I want to remember, and keep in mind. Whether it's through sudo code, hand drawings or just notes - taking the time to outline the flow of componoents and their functionalities is extrelemely important (p.s. I did thesee things I just wished I had taken more time on it before jumping straight into coding).
+
+Well as some final thougths, this project was really fun to work on. All comments, and feedback is welcome. I'm learning everyday and trying to become a better developer in the process. :) 
   
   
