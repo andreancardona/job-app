@@ -4,7 +4,21 @@ Job App is a simple CRU (CRUD app...without the delete) that allows a user to ad
 
 ## Get started - TLDR!
 
+In your terminal run: 
+
+## `git clone https://github.com/andreancardona/job-app` 
+
+To clone the app
+
+## `cd job-app`
+
+CD into the project `job-app`
+
 In the project directory, you can run:
+
+## `yarn install`
+
+To download all the packages
 
 ## `yarn start` - Navigate to [http://localhost:3000/home](http://localhost:3000/home)
 
@@ -27,7 +41,7 @@ Run the above command to compile your sass styling changes
   - [Node SASS](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)
   - [Yarn Package Manager](https://yarnpkg.com/)
 
-### It should look like something below: 
+### It should look like this: 
 
 <img width="1146" alt="Screen Shot 2021-03-14 at 11 53 43 PM" src="https://user-images.githubusercontent.com/32720851/111171788-dadee380-856a-11eb-9b73-20387f932aa2.png">
 
@@ -37,7 +51,7 @@ https://user-images.githubusercontent.com/32720851/111167742-0790fc00-8567-11eb-
 
 -----------------------------------------------------------------------------
 
-## Let's get started (the longer version)
+## Let's get started - the longer version...
 
 There are a few key concepts I'd like to elaborate on:
 1. [File structure](https://github.com/andreancardona/job-app/blob/main/README.md#file-structure)
@@ -48,7 +62,7 @@ There are a few key concepts I'd like to elaborate on:
 6. [A little reflection (an optional read..)](https://github.com/andreancardona/job-app/blob/main/README.md#a-little-reflection)
 
   ### File structure
-  File structures can always get messy quickly, which is why I've tried to keep mine as simple as possible! 
+  File structures can get messy quickly, which is why I've tried to keep mine as simple as possible! 
   I've divided my project into 4 main groups: 
   
     1. Components 
@@ -62,17 +76,17 @@ There are a few key concepts I'd like to elaborate on:
    
    When thinking about how to write my code I wanted to keep it DRY, readable, effective and again as simple possible. And so, I decided to use [React Hooks](https://reactjs.org/docs/hooks-intro.html). The biggest reason I love using React Hooks is because both presentational & functional components can hold state...which is pretty awesome. And remember this and binding, and how confusing all that was, it get's rid of all that too :). Here is a great medium article that breaks down using state with Reacht Hooks - [React Hooks Understanding the Basics](https://medium.com/makemytrip-engineering/react-hooks-understanding-the-basics-d7f8290f445e)
    
-    To see this all in action:
-      - run: `yarn start`
-      - navigatate to `http://localhost:3000/home`
+    To see this in action run the following at the root of the app:
+      - `yarn start`
+      - then navigatate to `http://localhost:3000/home`
    
    ### Accessbility
    
    Making this project Accessible was extremely important. I decide to use a few tools that would help me get there:
-   1. [Jest Axe](https://www.npmjs.com/package/jest-axe). This is the jest testing package that will run test on your components to check for any acceesesibility violations. As noted on the npm site - it does not mean   your app is accessible, it's just a tool to help get you there. 
+   1. [Jest Axe](https://www.npmjs.com/package/jest-axe). This is the jest testing package that will run test on your components to check for any accessibility violations. As noted on the npm site - it does not mean your app is accessible, it's just a tool to help get you there. 
    
-    To see this in action
-      - run: `yarn test`
+    To see this in action run the following at the root of the app:
+      - `yarn test`
      
    2. Voice Over Screen Reader (imbedded in all Macs) - [to get started read this awesome medium article](https://medium.com/@lsnrae/how-to-use-the-voiceover-screen-reader-70699e2e0f8a#:~:text=Basic%20VoiceOver%20Commands%20(Safari),rotor%20%E2%80%94%20Ctrl%2BOpt%2BU)
    3. IBM Accessibility Checker - [Chrome extension](https://chrome.google.com/webstore/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp)
@@ -84,14 +98,14 @@ There are a few key concepts I'd like to elaborate on:
   ### Testing 
   For this project I chose to use [Jest Axe](https://www.npmjs.com/package/jest-axe) to catch any potential acceessibility violations (as mentioned above) and [Jest Snapshots](https://jestjs.io/docs/snapshot-testing) for our UI component testing. The main thing I was checking for in testing was that props were being passeed down properly, that the data structures were correct, and that the components were being rendered as expected. This is great resource to learn about [The pros and cons of Jest snapshot testing](https://tsh.io/blog/pros-and-cons-of-jest-snapshot-tests/#:~:text=Jest%20with%20snapshots%20gives%20you,if%20the%20values%20are%20correct.) 
      
-    To see this in action
-      - run: `yarn test`
+    To see this in action run the following at the root of the app:
+      - `yarn test`
   
   ### Styles
   For this project, if you take a look at my commit history, I started using pure css, and then...I switched it up! My over all approach to this project, was keep it simple *and then* enhance. I love using scss, mainly because it does a lot of the guess work for you! SCSS allows you to define style variables at the top level, making them accessbile throughout every part of your project. An amazing resource to understand how you might want to think about approaching styles is this article [Style React Components: 7 Ways Compared](https://www.sitepoint.com/react-components-styling-options/#usingscsswithreact)
      
-    To see this in action 
-      - run: `sass --watch src/index.scss build/index.css`
+      To see this in action run the following at the root of the app: 
+      - `sass --watch src/index.scss build/index.css`
       - make some changes: navigate to `_colors/scss` file and change `$background-blue: #085ff7;` to `$background-blue: #fa4525;` 
       and you should see all the once blue button background change to red - pretty cool, right? :)
 
