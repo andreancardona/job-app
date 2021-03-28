@@ -7,9 +7,8 @@
 /* job form container */
 
 .job-form-container {
-  margin-top: 140px;
+  margin: 140px 0 20px 0;
   width: 70%;
-  height: 75%;
   background: $background-white;
   border: 1px solid $border-light;
   border-radius: 8px;
@@ -60,6 +59,12 @@
   display: flex;
   flex-direction: column;
   padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .job-form {
+    padding: 30px 30px 10px 30px;
+  }
 }
 
 .label {
@@ -134,7 +139,8 @@ select {
 /* job form footer */
 
 .job-form--footer {
-  height: 70px;
+  height: 105px;
+  padding: 0px 0 0 30px;
   border-top: 1px solid $border-light;
 }
 
