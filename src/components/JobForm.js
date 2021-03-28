@@ -5,7 +5,7 @@ const JobForm = (props) => {
   const initialJobForm = { id: '', title: '', location: '', sponsorship: 'Sponsor', status: 'Open' };
 
   // Set initial state based on user action - Edit current job or Add new job
-  const [ job, setJob ] = useState(props.currentJob || initialJobForm);
+  const [ job, setJob ] = useState(props.editing ? props.currentJob : initialJobForm);
 
   let history = useHistory();
 
