@@ -2,11 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import App from './components/App';
+import NewApp from './components/NewApp';
+// import App from './components/App';
+import { JobProvider } from './context/JobContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <JobProvider>
+      <NewApp  />
+    </JobProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
