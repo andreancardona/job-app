@@ -10,7 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     <JobProvider>
-      <NewApp  />
+      <NewApp />
     </JobProvider>
   </React.StrictMode>,
   document.getElementById('root')
