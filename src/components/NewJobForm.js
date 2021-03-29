@@ -94,16 +94,17 @@ const NewJobFrom = (route) => {
         <label className="label" tabIndex="0">{labels.location} *</label>
         <div className="sub-label" aria-label={subLabels.location} tabIndex="0">{subLabels.location}</div>
           <input className="input" aria-label="title" type="text" value={currentJob ? currentJob.location : null} tabIndex="0" onChange={currentJob ? (event) => handleOnChange("location", event.target.value) : (event) => setLocation(event.target.value)}/>
-        
         <label className="label" aria-label={subLabels.sponsorship} tabIndex="0">{labels.sponsorship} *</label>
         <div className="sub-label"  aria-label={subLabels.sponsorship} tabIndex="0">{subLabels.sponsorship}</div>    
-          <select className="select-input" aria-label="sponsorship options" name="sponsorship" value={currentJob ? currentJob.sponsorship : null} onChange={currentJob ? (event) => handleOnChange("sponsorship", event.target.value) : (event) => setSponsorship(event.target.value)} tabIndex="0">
+          <select className="select-input" aria-label="sponsorship options" name="sponsorship" value={currentJob ? currentJob.sponsorship : null} 
+            onChange={currentJob ? (event) => handleOnChange("sponsorship", event.target.value) : (event) => setSponsorship(event.target.value)} tabIndex="0">
             <option value="Sponsored">Sponsored</option>
             <option value="Free">Free</option>
           </select> 
         <label className="label" aria-label={subLabels.status} tabIndex="0">{labels.status} *</label>
         <div className="sub-label" aria-label={subLabels.status}  tabIndex="0">{subLabels.status}</div> 
-          <select className="select-input" aria-label="status options" value={currentJob ? currentJob.status : null} onChange={currentJob ? (event) => handleOnChange("status", event.target.value) : (event) => setStatus(event.target.value)} tabIndex="0">
+          <select className="select-input" aria-label="status options" value={currentJob ? currentJob.status : null} 
+            onChange={currentJob ? (event) => handleOnChange("status", event.target.value) : (event) => setStatus(event.target.value)} tabIndex="0">
             <option value="Open">Open</option>
             <option value="Paused">Paused</option>
             <option value="Closed">Closed</option>
@@ -112,11 +113,11 @@ const NewJobFrom = (route) => {
       <div className="job-form--footer">
         <div className="footer-buttons">
           <Link to="/">
-              <button className="add-save-button" onClick={currentJob ? handleSubmit : onSubmit}>Submit</button>
-            </Link>
-            <Link to="/">
-              <button className="cancel-button">Cancel</button>
-            </Link>
+            <button className="add-save-button" onClick={currentJob ? handleSubmit : onSubmit}>Submit</button>
+          </Link>
+          <Link to="/">
+            <button className="cancel-button">Cancel</button>
+          </Link>
         </div>
       </div>
     </div>
