@@ -67,10 +67,10 @@ const NewJobFrom = (route) => {
       <form className="job-form">
         <label className="label" tabIndex="0">{labels.title} *</label>
         <div className="sub-label" aria-label={subLabels.title} tabIndex="0">{subLabels.title}</div>
-          <input className="input" aria-label="title" tabIndex="0" type="text" value={currentJob ? currentJob.title : null} onChange={currentJob ?  (e) => handleOnChange("title", e.target.value) : (e) => setTitle(e.target.value)}/>
+          <input className="input" aria-label="title" tabIndex="0" type="text" value={currentJob ? currentJob.title : null} onChange={currentJob ?  (event) => handleOnChange("title", event.target.value) : (event) => setTitle(event.target.value)}/>
         <label className="label" tabIndex="0">{labels.location} *</label>
         <div className="sub-label" aria-label={subLabels.location} tabIndex="0">{subLabels.location}</div>
-          <input className="input" aria-label="title" type="text" value={currentJob ? currentJob.location : null} tabIndex="0" onChange={currentJob ? (e) => handleOnChange("location", e.target.value) : (e) => setLocation(e.target.value)}/>      
+          <input className="input" aria-label="title" type="text" value={currentJob ? currentJob.location : null} tabIndex="0" onChange={currentJob ? (event) => handleOnChange("location", event.target.value) : (event) => setLocation(event.target.value)}/>      
         <Link to="/">
           <button onClick={currentJob ? handleSubmit : onSubmit}>Submit</button>
         </Link>

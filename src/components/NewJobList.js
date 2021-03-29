@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { JobContext } from '../context/JobContext';
 
-const NewHome = () => {
+const NewJobList = () => {
 
   const { jobs } = useContext(JobContext);
 
@@ -17,25 +17,17 @@ const NewHome = () => {
           <div key={job.id}>
             {job.title}
             {job.location}
-            <Link
-              to={{
-                pathname: `/new-job-details/${job.id}`,
-              }}
-            >
+            <Link to={{pathname: `/new-job-details/${job.id}`}}>
               <button>Edit</button>
             </Link>
           </div>
         );
       })}
-       <Link
-            to={{
-            pathname: `/new-job-details/${job.id}`,
-          }}
-        >
+      <Link to={{pathname: `/new-job-details/${job.id}`}}>
         <button>ADD JOB</button>
-     </Link>
+      </Link>
     </div>
   );
 };
 
-export default NewHome;
+export default NewJobList;

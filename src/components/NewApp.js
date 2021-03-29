@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import NewHome from "./NewHome";
+import NewJobList from "./NewJobList";
 import NewJobForm from "./NewJobForm";
 
 const NewApp = () => {
@@ -9,12 +9,8 @@ const NewApp = () => {
     <BrowserRouter>
     <div>
       <Switch>
-        <Route exact path="/" component={NewHome} />
-        <Route
-          exact
-          path="/new-job-details/:id"
-          component={NewJobForm}
-        />
+        <Route exact path="/" component={NewJobList} />
+        <Route exact path="/new-job-details/:id" component={NewJobForm}/>
       </Switch>
     </div>
   </BrowserRouter>
