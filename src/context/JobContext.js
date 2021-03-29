@@ -1,12 +1,19 @@
 import React, { createContext, useReducer } from "react";
 import jobReducer from './JobReducer';
 
+// Navigation information
+const navInfo = {
+  title: 'JobHob',
+  userName: 'Andrea Cardona',
+  userRole: 'Admin'
+}
+
 // Initial list of jobs
 const initialState = {
   jobs: [
-    { id: 1, title: 'Product Manager', location: 'Austin, TX'},
-    { id: 2, title: 'CEO', location: 'Austin, TX'},
-    { id: 3, title: 'Software Engineer', location: 'Seattle, WA'},
+    { id: 1, title: 'Product Manager', location: 'Austin, TX', posted: '10/04/2020', sponsorship: 'Free', status: 'Paused' },
+    { id: 2, title: 'CEO', location: 'Austin, TX', posted: '12/30/2020', sponsorship: 'Sponsored', status: 'Closed'},
+    { id: 3, title: 'Software Engineer', location: 'Seattle, WA', posted: '11/18/2020', sponsorship: 'Free', status: 'Open'},
   ]
 }
 
@@ -33,6 +40,7 @@ const [state, dispatch] = useReducer(jobReducer, initialState);
   return (
     <JobContext.Provider
       value={{
+        navInfo,
         jobs: state.jobs,
         addJob,
         editJob,
