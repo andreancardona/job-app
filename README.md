@@ -1,4 +1,4 @@
-[UNDER CONSTRUCTION / REFACTOR] # Welcome to my `Job App` project!
+#[UNDER CONSTRUCTION / REFACTOR] Welcome to my `Job App` project!
 
 Job App is a simple CRU (CRUD app...without the delete) that allows a user to add a job posting and edit an existing job.
 
