@@ -26,7 +26,7 @@ const JobList = () => {
           <div className="listings-count">{jobs.length} listings</div>
         </div>
         <Link to={{pathname: `/new-job-details/${job.id}`}}>
-         <button className="add-save-button">ADD JOB</button>
+         <button className="add-save-button">Add Job</button>
        </Link>
       </div>
       <div aria-hidden="true" className="jobs-list-container" role="grid" id="job-list">
