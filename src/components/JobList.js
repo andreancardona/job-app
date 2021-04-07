@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import { JobContext } from '../context/JobContext';
 import CurrentDate from '../utils/CurrentDate';
 
-const NewJobList = () => {
+const JobList = () => {
 
   const { jobs } = useContext(JobContext);
-
-  console.log(jobs, 'here')
 
   const job = jobs.map(job => {
     return job;
@@ -21,10 +19,16 @@ const NewJobList = () => {
   }
 
   return (
-    <div className="new-jobs-container">
-      <Link to={{pathname: `/new-job-details/${job.id}`}}>
-        <button className="add-save-button">ADD JOB</button>
-      </Link>
+    <div className="jobs-container">
+      <div className="header-container">
+        <div className="header-jobs" tabIndex="0" role="heading" aria-level="1">
+          Jobs 
+          <div className="listings-count">{jobs.length} listings</div>
+        </div>
+        <Link to={{pathname: `/new-job-details/${job.id}`}}>
+         <button className="add-save-button">ADD JOB</button>
+       </Link>
+      </div>
       <div aria-hidden="true" className="jobs-list-container" role="grid" id="job-list">
         <div id="job-list-headers" className="jobs-list-headers" tabIndex="0" role="row" aria-label="jobs listings">
           <div className="header-title" aria-label="title">{jobListHeaders.title}</div>
@@ -41,7 +45,7 @@ const NewJobList = () => {
               </div>
               <div className="job-post-details">
                 <div className="posted" aria-label={"posted" + job.posted}>{job.posted ? job.posted : <CurrentDate />}</div>
-                <div className="sponsorship" aria-label={"sponsorship" + job.sponsorship} >{job.sponsorship}</div>
+                <div className="sponsorship" aria-label={"sponsorship" + job.sponsorship}>{job.sponsorship}</div>
                 <div className="status" aria-label={"status" + job.status}>{job.status}</div>
                 <Link to={{pathname: `/new-job-details/${job.id}`}}>
                   <button className="edit-button">Edit</button>
@@ -55,4 +59,4 @@ const NewJobList = () => {
   );
 };
 
-export default NewJobList;
+export default JobList;

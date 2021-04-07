@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import profilePlaceholder from '../images/profilePlaceholder.svg';
 import { JobContext } from '../context/JobContext';
 
-const Navigation = ({ props }) => {
+const Navigation = () => {
 
   const { navInfo } = useContext(JobContext);
   

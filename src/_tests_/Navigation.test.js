@@ -4,22 +4,15 @@ import { render } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import Navigation from '../components/Navigation';
 
- // Navigation props
- const navProps = {
-  title: 'JobHob',
-  userName: 'Andrea Cardona',
-  userRole: 'Admin'
-}
-
 describe('The <Navigation /> component', () => {
-  test('Navigation renders with Navigation props', () => {
-    const tree = renderer.create(<Navigation props={navProps}/>).toJSON();
+  test('Navigation renders', () => {
+    const tree = renderer.create(<Navigation />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
 
   test('Job should not fail any accessibility tests', async () => {
-    const { container } = render(<Navigation props={navProps}/>);
+    const { container } = render(<Navigation />);
     expect(await axe(container)).toHaveNoViolations();
   });
 });

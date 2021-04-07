@@ -2,15 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import NewApp from './components/NewApp';
-// import App from './components/App';
+import App from './components/App';
 import { JobProvider } from './context/JobContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
     <JobProvider>
-      <NewApp />
+      <App />
     </JobProvider>
   </React.StrictMode>,
   document.getElementById('root')

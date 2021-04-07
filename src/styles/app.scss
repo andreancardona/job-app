@@ -1,25 +1,18 @@
 @import "./_colors.scss";
 
 /* app container */
-.new-app-container {
+
+.app-container {
   width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.app-container {
-  background: $background-light;
-  min-height: 100%;  
-  width: 100%;
-  // it is positioned absolutely with reference to the closest parent that has a position relative value.
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: $background-light;
 }
 
 main {
