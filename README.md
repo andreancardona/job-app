@@ -74,7 +74,7 @@ There are a few key concepts I'd like to elaborate on:
    
     To see this in action run the following at the root of the app:
       - `yarn start`
-      - then navigatate to `http://localhost:3000/home`
+      - then navigatate to `http://localhost:3000`
    
    ### Accessbility
    
