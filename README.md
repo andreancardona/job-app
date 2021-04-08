@@ -43,11 +43,7 @@ Run the above command to compile your sass styling changes
 
 ### It should look like this: 
 
-<img width="1146" alt="Screen Shot 2021-03-14 at 11 53 43 PM" src="https://user-images.githubusercontent.com/32720851/111171788-dadee380-856a-11eb-9b73-20387f932aa2.png">
-
-https://user-images.githubusercontent.com/32720851/111167742-0790fc00-8567-11eb-97b8-274d44709294.mp4
-
-
+<img width="1680" alt="Screen Shot 2021-04-07 at 8 59 12 PM" src="https://user-images.githubusercontent.com/32720851/113962017-2f7d2380-97e4-11eb-9092-aa955f68709a.png">
 
 -----------------------------------------------------------------------------
 
