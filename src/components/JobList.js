@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { JobContext } from '../context/JobContext';
+import { useJobContext } from '../context/JobContext';
 import CurrentDate from '../utils/CurrentDate';
 
 const JobList = () => {
 
-  const { jobs } = useContext(JobContext);
+  const { jobs } = useJobContext()
 
   const job = jobs.map(job => {
     return job;

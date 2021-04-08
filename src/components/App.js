@@ -10,10 +10,10 @@ const App = () => {
     <div className="app-container">
       <Navigation />
       <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={JobList} />
-            <Route exact path="/new-job-details/:id" component={JobForm}/>
-          </Switch>
+        <Switch>
+          <Route exact path="/" component={JobList} />
+          <Route exact path="/new-job-details/:id" component={JobForm}/>
+        </Switch>
       </BrowserRouter>
     </div>
   )

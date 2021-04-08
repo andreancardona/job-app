@@ -1,18 +1,30 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { render } from '@testing-library/react';
-import { axe } from 'jest-axe';
+import { shallow } from 'enzyme';
+import * as JobContex from '../context/JobContext';
 import Navigation from '../components/Navigation';
 
-describe('The <Navigation /> component', () => {
-  test('Navigation renders', () => {
-    const tree = renderer.create(<Navigation />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+// Navigation information
+const navInfo = {
+  title: 'JobHob',
+  userName: 'Andrea Cardona',
+  userRole: 'Admin'
+}
 
+describe('<Navigation />', () => {
+  test('it should mock the context & return a title, userName and userRole', () => {
+    const contextValues = { 
+      navInfo,
+    };
+    jest
+      .spyOn(JobContex, 'useJobContext')
+      .mockImplementation(() => contextValues);
+    const wrapper = shallow(<Navigation />);
+    const navTitle = wrapper.find({className: 'nav-title'});
+    const navUserName = wrapper.find({className: 'user-profile--name'});
+    const navUserRole = wrapper.find({className: 'user-profile--role'});
 
-  test('Job should not fail any accessibility tests', async () => {
-    const { container } = render(<Navigation />);
-    expect(await axe(container)).toHaveNoViolations();
+    expect(navTitle).toHaveLength(1)
+    expect(navUserName).toHaveLength(1)
+    expect(navUserRole).toHaveLength(1)
   });
 });

@@ -1,12 +1,12 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { JobContext } from '../context/JobContext';
+import { useJobContext } from '../context/JobContext';
 
 const JobForm = (route) => {
   let history = useHistory();
 
   // bring in context actions from JobContext
-  const { jobs, editJob, addJob } = useContext(JobContext);
+  const { jobs, editJob, addJob } = useJobContext();
 
   // set state for editing a current Job
   const [ currentJob, setCurrentJob ] = useState({
@@ -85,12 +85,8 @@ const JobForm = (route) => {
   return (
     <div className="job-form-container">
       <div className="form-headers" tabIndex="0" role="heading" aria-level="1" aria-label={header + subHeader}>
-        <div className="form-heading">
-          {header}
-        </div>
-        <div className="form-sub-heading">
-          {subHeader}
-        </div>
+        <div className="form-heading">{header}</div>
+        <div className="form-sub-heading">{subHeader}</div>
       </div>
       <form className="job-form">
         <label className="label" tabIndex="0">{labels.title} *</label>
@@ -117,7 +113,7 @@ const JobForm = (route) => {
             aria-label="sponsorship options" 
             name="sponsorship" 
             value={currentJob ? currentJob.sponsorship : 'Sponsor'} 
-            onChange={currentJob ? (event) => handleOnChange("sponsorship", event.target.value) : (event) => setSponsorship(event.target.value)} tabIndex="0">
+            onChange={currentJob ? (event) => handleOnChange('sponsorship', event.target.value) : (event) => setSponsorship(event.target.value)} tabIndex="0">
             <option value="Sponsor">Sponsor</option>
             <option value="Free">Free</option>
           </select> 
@@ -127,7 +123,7 @@ const JobForm = (route) => {
             className="select-input" 
             aria-label="status options" 
             value={currentJob ? currentJob.status : 'Open'} 
-            onChange={currentJob ? (event) => handleOnChange("status", event.target.value) : (event) => setStatus(event.target.value)} tabIndex="0">
+            onChange={currentJob ? (event) => handleOnChange('status', event.target.value) : (event) => setStatus(event.target.value)} tabIndex="0">
             <option value="Open">Open</option>
             <option value="Paused">Paused</option>
             <option value="Closed">Closed</option>

@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import profilePlaceholder from '../images/profilePlaceholder.svg';
-import { JobContext } from '../context/JobContext';
+import { useJobContext } from '../context/JobContext';
 
 const Navigation = () => {
 
-  const { navInfo } = useContext(JobContext);
+  const { navInfo } = useJobContext();
   
   return (
     <nav id="nav" className="nav-container">

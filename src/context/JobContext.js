@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { useContext, createContext, useReducer } from "react";
 import jobReducer from './JobReducer';
 
 // Navigation information
@@ -16,6 +16,13 @@ const initialState = {
     { id: 3, title: 'Software Engineer', location: 'Seattle, WA', posted: '11/18/2020', sponsorship: 'Free', status: 'Open'},
   ]
 }
+
+// export const useAppContext = () => useContext(AppContext);
+
+// const defaultValues = { color: 'green' };
+// const AppContext = React.createContext(defaultValues);
+
+export const useJobContext = () => useContext(JobContext);
 
 export const JobContext = createContext();
 

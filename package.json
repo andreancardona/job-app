@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.1.10",
+    "enzyme": "^3.11.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@testing-library/dom": "^7.29.6",
     "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react-hooks": "^5.1.1",
     "enzyme-adapter-react-16": "^1.15.6",
     "jest-axe": "^4.1.0",
     "jest-environment-enzyme": "^7.1.2",

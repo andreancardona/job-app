@@ -5,4 +5,9 @@
 import '@testing-library/jest-dom/extend-expect';
 
 import { toHaveNoViolations } from 'jest-axe';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
 expect.extend(toHaveNoViolations);
+
+configure({ adapter: new Adapter() });
