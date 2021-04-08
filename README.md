@@ -1,4 +1,4 @@
-# [UNDER CONSTRUCTION / REFACTOR] Welcome to my `Job App` project!
+# Welcome to my `Job App` project!
 
 Job App is a simple CRU (CRUD app...without the delete) that allows a user to add a job posting and edit an existing job.
 
@@ -20,9 +20,9 @@ In the project directory, you can run:
 
 To download all the packages
 
-## `yarn start` - Navigate to [http://localhost:3000/home](http://localhost:3000/home)
+## `yarn start`
 
-Navigate to the home screen of the app [http://localhost:3000/home](http://localhost:3000/home)
+Navigate to the home screen of the app [http://localhost:3000](http://localhost:3000)
 
 ## `yarn test`
 
@@ -95,8 +95,8 @@ There are a few key concepts I'd like to elaborate on:
   
   Please note - I am not an accessibility expert, just a developer trying to make more inclusive apps, and I'm still learning, so all feedback to make this app more accessible is welcome!
   
-  ### Testing 
-  For this project I chose to use [Jest Axe](https://www.npmjs.com/package/jest-axe) to catch any potential acceessibility violations (as mentioned above) and [Jest Snapshots](https://jestjs.io/docs/snapshot-testing) for our UI component testing. The main thing I was checking for in testing was that props were being passeed down properly, that the data structures were correct, and that the components were being rendered as expected. This is great resource to learn about [The pros and cons of Jest snapshot testing](https://tsh.io/blog/pros-and-cons-of-jest-snapshot-tests/#:~:text=Jest%20with%20snapshots%20gives%20you,if%20the%20values%20are%20correct.) 
+  ### Testing [ IN PROGRESS ]
+  For this project I chose to use [Jest Axe](https://www.npmjs.com/package/jest-axe) to catch any potential acceessibility violations (as mentioned above) and [Jest Snapshots](https://jestjs.io/docs/snapshot-testing) for our UI component testing.
      
     To see this in action run the following at the root of the app:
       - `yarn test`
@@ -113,6 +113,6 @@ There are a few key concepts I'd like to elaborate on:
  ### A little reflection
  With personal projects I've realized it's hard to not want to keep *working* to improve it. If you look at my commit history I changed many major parts of the project multiple times - from switching css to scss, creating and adding components to changing the file structure of my app. What's cool about coding is, there are so many different ways to achieve the same intention - and that's pretty awesome. I think looking forward, I would have taken more time to understand how I wanted to structure my components. I think that would've helped me define a clearer vision of how I wanted to develop this project. But, we live and learn. And so looking forward this is something I want to remember, and keep in mind. Whether it's through sudo code, hand drawings or just notes - taking the time to outline the flow of componoents and their functionalities is extrelemely important (p.s. I did thesee things I just wished I had taken more time on it before jumping straight into coding).
 
-Well as some final thougths, this project was really fun to work on. All comments, and feedback is welcome. I'm learning everyday and trying to become a better developer in the process. :) 
+Well as some final thougths, this project was really fun to work on. All comments and feedback is welcome. I'm learning everyday and trying to become a better developer in the process. :) 
   
   
